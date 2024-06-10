@@ -22,7 +22,7 @@ title: Thoughts & Ramblings
 email: patrick@devins.me
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about random stuff.
-baseurl: "/rich-platypus" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 domain: blog.devins.me
 url: "https://blog.devins.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: pddevins 
