@@ -20,26 +20,26 @@ option on the shelf. Acrylic lets you paint over a mistake. Oil gives you days t
 your mind. Watercolor gives you one pass, light to dark, and every correction stays
 visible as a correction.
 
-That was the reason, not an oversight. I wanted something I could not undo. I have spent
+That was the whole reason. I wanted something I couldn't undo. I have spent
 a career in work whose entire discipline is making things reversible: version control,
 staging environments, migrations that roll back cleanly. I am good at that, and it has
-quietly trained me to treat every mistake as something to be erased before anyone sees
-it. Watercolor does not offer the option. You either let the mark stand or you find a way
+quietly trained me to treat every mistake as something ephemeral and temporary. Watercolor 
+doesn't offer that option. You either let the mark stand or you find a way
 to make it part of the picture, and learning to do the second thing was the actual reason
 I picked up a brush.
 
 I bought a book that works through the techniques one lesson at a time, and I filled a
 notebook faster than I expected to. The piece I'm proudest of is a reproduction of a
 figure from Gray's Anatomy, the bones of the arm with the musculature of the bicep laid
-over them. It turned out well. I did not expect to be able to say that this year about
-anything I made with my hands.
+over them. It turned out well. I didn't expect to be able to say that this year about
+anything I painted.
 
 What I hadn't anticipated is how much of it is looking rather than doing. The skill being
 trained is noticing that a shadow isn't gray, that it's the color of whatever is bouncing
 into it, and once that's trained it doesn't switch off. I see more than I used to. I'd
 have called that precious if someone else had said it to me, and I'd have been wrong.
 
-Both instruments were returns, and the distance between them is the interesting part. One
+Both of the instruments were returns, and the distance between them is the interesting part. One
 I had been away from for four years. The other for more than twenty.
 
 Twenty years is long enough that the bass isn't really a return at all. I sat down
@@ -47,7 +47,7 @@ expecting my hands to know something, and they knew nothing. Every position had 
 learned as though I'd never played, which was humbling in a way I hadn't braced for,
 because I had told myself I was picking something back up. I was starting. I play alone,
 for my own benefit, and nobody has ever had to hear it, which removes the only real
-pressure and leaves the pleasure of the thing intact.
+pressure and leaves me with the pleasure of "just getting to play".
 
 The violin was the easy one, and that surprised me. I took lessons from 2015 to 2018 and
 then let it sit, and four years later my hands still knew where the notes were. Bow hold,
@@ -60,8 +60,8 @@ and so was the ability to hear where a line wants to go and then follow it. I co
 produce notes and had lost the part that decides which notes, which is a strange place to
 be stranded: fluent in the mechanics of a language and unable to say anything in it.
 
-That's the real work of picking an instrument back up, and it isn't the part anyone warns
-you about.
+That's the challenge of picking up your abandoned past: are you inspired by what you lost
+or are you sorry you lost it.
 
 Then jiu jitsu, which is the odd one out here, and the reason the rest of the year held
 together. It isn't a return. It's the one thing that has been continuous. Three years

@@ -11,10 +11,10 @@ published: false
 
 Most teams that adopt Cucumber or Behat end up with a slower, more brittle test suite
 than the one they replaced, and conclude that Gherkin was a mistake. It wasn't a
-mistake, it was a misidentification. The value of `Given / When / Then` is almost
-entirely extracted before anyone writes a step definition, and if you're measuring it by
-the tests it produces you've bought an expensive testing framework to solve a
-specification problem.
+mistake, it was a misidentification. Most of the value of `Given / When / Then` is
+extracted before anyone writes a step definition, and if you're measuring it by the tests
+it produces you've bought an expensive testing framework to solve a specification
+problem.
 
 <!--more-->
 
@@ -108,8 +108,20 @@ tested by someone who wasn't in the conversation. A story described as "user can
 approvals" cannot, so QA reconstructs intent by asking, which happens after the code
 exists and therefore after the expensive part.
 
-That's what "QA readiness" means in practice, and it's a writing discipline rather than
-a tooling decision. Gherkin is one way to enforce it, and its syntax is a convenient
-forcing function. A bulleted list of examples in the ticket gets you most of the same
-benefit for none of the step-definition tax, which is the trade most teams should
-probably make.
+That's what "QA readiness" means in practice, and it's a writing discipline rather than a
+tooling decision. Gherkin is one way to enforce it, and its syntax is a convenient
+forcing function.
+
+Which raises the obvious objection. If the discipline is the thing that matters, why pay
+the step-definition tax at all? A bulleted list of examples in the ticket enforces the
+same writing discipline and costs nothing to maintain.
+
+For a lot of teams that is the right trade, and I would tell them to make it. But it buys
+one of the two benefits, not both, and the difference is whether anyone downstream has to
+execute your examples. A bullet gets you the specification. It cannot get you the
+contract, because you cannot assert against a bullet. If QA automation is a separate
+suite maintained by separate people, you need a shared artifact that both sides can point
+at and run, and a paragraph in a ticket will never do that job. That is the point where
+step definitions start earning their cost, and it is why we kept them.
+
+So: bullets if what you need is the conversation. Gherkin if you also need the contract.
