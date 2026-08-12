@@ -133,7 +133,7 @@ The appeal was never portability in the abstract. It's that the environment stop
 tied to the laptop in front of me. Same setup from any machine, and the project's
 dependencies live where the project lives instead of accumulating on my desktop.
 
-Half of it stuck. Neovim slowed me down for the first two weeks, and I have used it
+Half of it stuck. Neovim only slowed me down for the first two weeks, and I have used it
 every day since. The remote server did not last the year.
 
 The reason is mundane enough to be worth recording. The friction wasn't the editor, and

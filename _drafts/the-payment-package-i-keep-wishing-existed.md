@@ -40,7 +40,7 @@ charge call. They're in the state machine around it.
 Building a gateway rather than consuming one changes which parts of the abstraction you
 think are essential.
 
-The thing you learn immediately is that the authorisation is a small, well-defined event
+The thing you learn immediately is that the authorization is a small, well-defined event
 and everything expensive happens afterward. Auth and capture are separate for good
 reasons and most application code conflates them. Settlement happens on somebody else's
 schedule. Money that your database says you have is not money you have. A reversal is a
@@ -95,7 +95,7 @@ lowest-common-denominator interface would be safe and useless. Some gateway-spec
 surface has to be exposed deliberately, and I don't know where that line goes.
 
 **Whether stored payment methods can be abstracted at all**, given that the
-tokenisation model differs per gateway and getting it wrong has compliance consequences
+tokenization model differs per gateway and getting it wrong has compliance consequences
 rather than merely bugs.
 
 **Money representation.** Integer minor units, certainly. Multi-currency with

@@ -75,6 +75,23 @@ grep -rniE '\b(behaviour|colour|favour|honour|fortnight|whilst|amongst|learnt|li
 Note the second half matches only the verb endings. A bare `optimis` or `realis`
 prefix also matches "optimistic" and "realistic", which are correct.
 
+A fixed word list will always miss some, because the British forms take prefixes
+(`reorganise`) and appear as nouns (`tokenisation`, `equalisation`). The reliable
+method is to enumerate every candidate and subtract the ones American English
+keeps:
+
+```bash
+grep -rhoE '\b[A-Za-z]+is(e|es|ed|ing|ation|ations)\b' _drafts/*.md \
+  | tr 'A-Z' 'a-z' | sort -u
+```
+
+Everything that comes back is British unless it is on this list, which is close to
+exhaustive for American English: advertise, advise, arise, chastise, comprise,
+compromise, concise, despise, devise, disguise, excise, exercise, franchise,
+improvise, merchandise, noise, otherwise, paradise, poise, praise, precise,
+premise, promise, raise, revise, rise, supervise, surprise, unwise, wise,
+enterprise, expertise.
+
 "Fortnight" in particular is a word he has never used.
 
 ### Phrases to ration, not ban

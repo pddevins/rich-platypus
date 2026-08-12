@@ -60,7 +60,7 @@ a new engineer reads it cold. Best for unit and integration work where the audie
 exclusively developers.
 
 **Pest**. the same engine with the ceremony removed. Higher-level `it()` blocks,
-expressive expectations, datasets that make parameterised cases readable instead of
+expressive expectations, datasets that make parameterized cases readable instead of
 arduous. What it changes is not capability but the marginal cost of writing one more
 test, and that marginal cost is what determines how many tests exist. Best as the
 default for new PHP work.
@@ -83,7 +83,7 @@ two as the **contract** between the application test suite and the QA automation
 That word is the whole point, and it's the arrangement I'd recommend to anyone.
 
 Gherkin isn't our integration suite and it isn't the developers' test framework. It's
-the shared artefact both sides commit against. Developers know a scenario describes
+the shared artifact both sides commit against. Developers know a scenario describes
 behavior they're responsible for; QA knows a scenario is what their automation is
 asserting; and when the two disagree, the disagreement is about a sentence that both
 parties previously agreed to, which is a very short argument.

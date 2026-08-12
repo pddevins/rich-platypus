@@ -1,7 +1,7 @@
 ---
 layout: post
 kind: log
-title: "Digitising the shelves"
+title: "Digitizing the shelves"
 subtitle: "A Samba share, an external DVD drive, and a turntable routed through a receiver into a laptop. Getting the physical media collection onto the homelab."
 date: 2025-09-20 13:00:00 -0400
 categories: [homelab]
@@ -91,11 +91,11 @@ The most interesting of the three, and the only one that's a real signal chain r
 than a file copy.
 
 The path: turntable into the JBL receiver, which handles the phono preamp and RIAA
-equalisation, then line out from the receiver into a Linux laptop's input, then Audacity
+equalization, then line out from the receiver into a Linux laptop's input, then Audacity
 recording the whole side as one file.
 
 Two things about that chain matter. The receiver is doing the phono stage, which is not
-optional. A turntable's output is far too quiet and equalised to a curve that has to be
+optional. A turntable's output is far too quiet and equalized to a curve that has to be
 reversed. And the recording is a whole side in one pass, because that's how records
 work; there is no track boundary in the signal, only quieter bits.
 
@@ -119,32 +119,60 @@ this is a one-time capture of a physical object. The record will not sound bette
 and the drive space is cheap relative to doing the whole thing again.
 
 I do use click removal. There's a purist argument for leaving surface noise alone as
-part of the artefact, and I understand it, but I'm making these to listen to rather than
+part of the artifact, and I understand it, but I'm making these to listen to rather than
 to document. Applied gently it takes out the pops without the smearing that makes
 over-processed vinyl rips sound underwater.
 
+## Three decisions that held up
+
+**Everything was ripped to a staging directory first.** Nothing went straight to the
+share. Each disc landed in a staging area where I could fix the album structure, get the
+track ordering right, and edit metadata, and it only moved across once it was in a state
+I was happy with. The share holds finished work. That separation is the reason I never
+had to reorganize a few hundred files in place, and it costs nothing to set up.
+
+**Naming and basic metadata happened at capture, not later.** Every disc got its own
+folder from the start, named by artist and album for music, or by title and year for
+film. Tags went on while the disc was still in the drive and the lookup result was
+sitting in front of me.
+
+The alternative is worse than it sounds. Rip first and sort later and you end up holding
+a file you have to open and listen to in order to work out what it is, which is a far
+more expensive question than the one you could have answered for free at rip time. I did
+fine-tune metadata afterward, but I was always refining something already correctly
+identified rather than reconstructing it from audio.
+
+**I started with the easy discs on purpose.** A handful of CDs and a few popular films
+went first, specifically as tests. Popular releases are the ones the metadata databases
+know best, so the tooling either works or it doesn't, and you find that out before the
+collection is at stake.
+
+The records went last, which is the right order. They are the slowest and most
+interesting part, and doing them first would have meant fiddling with label placement on
+one live album while the bulk of the collection sat untouched.
+
 ## What I'd do differently
 
-**Rip to a staging directory, not straight into the share.** I sent early rips
-directly to their final home and then had to reorganise once I understood how the media
-server wanted things named. A staging area costs nothing and makes the naming decision
-reversible.
+Settle the subtitle question once, in writing, instead of rediscovering it per disc.
+Picking the right subtitle track and checking its timing was the only part of this I
+approached fresh every time, and it is exactly the sort of thing that should have become
+a two-line note after the third film.
 
-**Settle the naming convention before ripping anything.** Media servers infer
-structure from paths, and renaming a few hundred files afterwards is a job you do once
-and resent.
+## The last twenty percent
 
-**Check the metadata match at rip time, not in a batch afterwards.** Fixing tags in
-bulk later means opening a file, listening to it, and working out what it actually is,
-which is far more expensive than glancing at a lookup result while the disc is still in
-the drive.
+About 80% of the collection is digitized. I do not consider that done.
 
-**Don't start with the records.** They're the most interesting and the slowest, and doing
-them first meant the boring bulk of the CD collection sat undone while I fiddled with
-label placement on one live album.
+What's left is the awkward part, which is why it's what's left: discs that wouldn't
+identify, records with segues I'll have to split by hand, a box set with no metadata
+anywhere. Each one is an individual decision rather than a batch, and batches are what
+made the first 80% possible.
 
-About 80% of the collection is digitised at this point, which I'm treating as done
-rather than as 20% remaining. The last fifth is the awkward fifth: the discs that
-wouldn't identify, the records with segues I'd have to split by hand, the box set with
-no metadata anywhere. Each one is a small individual decision rather than a batch, and
-batches are what made the first 80% possible.
+Finishing is the whole point, though, and I want to get there. The goal was never a large
+collection of files. It was having everything I already own in one place, under my
+control, playable without asking anyone. At 80% I still reach for Spotify to cover the
+gaps, which means I am still renting access to music that is sitting on a shelf ten feet
+away. That is the part I want to stop doing.
+
+TODO: any other real regrets on process? All three decisions above were yours and were
+correct, so "what I'd do differently" is carrying only the subtitle point. A thin regrets
+section is fine if that's the truth, but if something else annoyed you it belongs here.

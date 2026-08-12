@@ -36,7 +36,7 @@ tool that produces plausible code shifts my work from the thing I'm fast at to t
 I'm slow at, and it does so while removing the context that makes review possible. When
 I write a function, I know which cases I considered and which I dismissed. When I review
 a generated one, I know neither, so I have to reconstruct the reasoning from the
-artefact. That reconstruction is the expensive part, and it is precisely what gets
+artifact. That reconstruction is the expensive part, and it is precisely what gets
 skipped when a change looks fine.
 
 Which brings me to the failure mode I fear, which is not that these tools are wrong.

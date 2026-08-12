@@ -17,7 +17,7 @@ curriculum, only whether you show up for it.
 
 Last year took a number of things I had treated as permanent fixtures and revealed them
 to be arrangements — including the one I'd assumed was the least negotiable of all. A
-household reorganises itself around a fact like that whether or not anyone in it is
+household reorganizes itself around a fact like that whether or not anyone in it is
 ready, and mine did. What survived got tested hard enough that I now know which parts of
 my life were load-bearing and which were habit, and I could not have told you the
 difference in January.
@@ -40,7 +40,7 @@ start things without a clear reason and was fine abandoning half of them. That p
 had been slowly optimized away over a decade of being extremely responsible, and it
 turns out he was still in there, waiting for enough unstructured hours to resurface.
 
-I want to be careful not to make this sound like a straightforward win, because it
+I want to be careful not to make this sound like a total win, because it
 wasn't and the honest version matters more than the tidy one. There were months in there
 I would not repeat. Some of what changed, I'd change back. Grief for a particular shape
 of life is not a phase you complete, and anyone who tells you it resolves on a schedule
@@ -49,7 +49,7 @@ something that carries you, and the difference in weight is enormous even when t
 is the same.
 
 The reason I'm writing on the first of January rather than the thirty-first of December
-is that I'm more interested in the direction than the accounting. I've done enough
+is that I'm more interested in the direction than the reconning. I've done enough
 looking back. The genuinely surprising thing about arriving at a fresh start you didn't
 request is how much of it is actually free, not the circumstances, which are what they
 are, but the decisions. There's no accumulated inertia telling me how this year has to
@@ -61,4 +61,4 @@ room in the calendar for both. I want to be someone my kids watch being interest
 things, which is a better inheritance than being someone they watch being busy.
 
 None of that requires the year to have been good. It just requires me to still be here
-and paying attention, and I am, and I am.
+and paying attention, and I am.

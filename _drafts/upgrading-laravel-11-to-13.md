@@ -81,7 +81,7 @@ Worth knowing what the upgrade is buying, since it's all optional:
 method calls. Optional and fully backward compatible.
 - **Passkeys** support out of the box: WebAuthn without assembling it from packages.
 The most immediately useful item here for anything with user accounts.
-- **First-party JSON:API support**, with resource classes handling serialisation,
+- **First-party JSON:API support**, with resource classes handling serialization,
 relationship inclusion, sparse fieldsets, and compliant response headers. If you've
 hand-rolled JSON:API before, this is a large amount of code you get to delete.
 - **`Queue::route()`**, which puts the queue and connection for each job class in one

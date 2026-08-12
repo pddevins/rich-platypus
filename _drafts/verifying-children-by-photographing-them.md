@@ -22,7 +22,7 @@ Neither of those failures was a cryptographic failure. That is the thing I want 
 on, because the public argument about age verification is almost entirely about
 encryption and almost entirely misses where the risk lives.
 
-The problem being solved is real, and I want to establish that before criticising the
+The problem being solved is real, and I want to establish that before criticizing the
 solution, because a lot of privacy commentary treats child safety online as a pretext
 rather than a genuine concern. It isn't. Platforms built for adults are used by
 children, adults who want access to children go where children are, and "we ask users to
@@ -59,12 +59,12 @@ a claim about end-to-end behavior by reading the description of the happy path, 
 users are being asked to do exactly that.
 
 There's a structural point underneath, and it's the one I'd want a regulator to
-internalise. A system that determines who is under eighteen has necessarily processed
+internalize. A system that determines who is under eighteen has necessarily processed
 the under-eighteens. If it stores an outcome, it has produced a high-confidence register
 of which accounts belong to minors. If you were designing a resource for somebody who
 wanted to find children online, a verified list of accounts known to belong to them
 would be close to ideal. The safety mechanism and the targeting mechanism are the same
-artefact viewed from different directions, and the more reliable you make the
+artifact viewed from different directions, and the more reliable you make the
 verification, the more valuable the register becomes.
 
 To Discord's credit, and this deserves acknowledgement, it responded to the Persona

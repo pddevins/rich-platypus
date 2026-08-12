@@ -44,7 +44,7 @@ where the enumeration happens to live.
 
 It pays least on code whose shape is dictated by something else — a controller wiring
 two known things together, a migration, a view. Writing a failing test for a
-`resource()` route is theatre. The design has no degrees of freedom for the test to
+`resource()` route is theater. The design has no degrees of freedom for the test to
 constrain.
 
 The honest version of the practice is therefore selective, and a team that claims 100%
@@ -93,7 +93,7 @@ and visible; the cost it avoids is later and hypothetical, and might land on som
 else.
 
 I don't think exhortation fixes that. What worked was a board status called **Needs
-Refinement**, which sounds like process theatre and is the single most useful thing we
+Refinement**, which sounds like process theater and is the single most useful thing we
 had. It gave the specification conversation somewhere to happen *before* an estimate
 existed, and it made "this isn't specified enough to build" a legitimate thing to say
 rather than an obstruction. Once acceptance criteria arrived as concrete examples,

@@ -27,7 +27,7 @@ using hardware you already like.
 The hardware is also, crucially, old enough to be completely solved. Every quirk of this
 model has been documented by someone else years ago.
 
-## Why Arch this time, having rejected it before
+## Why Arch this time
 
 The earlier verdict was right for what I was testing: a work machine where an unexpected
 two-hour repair on a Tuesday is unacceptable, and where I wanted to replicate the
@@ -47,7 +47,7 @@ I landed on Niri, a scrollable-tiling Wayland compositor, which suits a 13-inch 
 better than a conventional tiling model does. Windows live on an infinite horizontal
 strip you scroll along, so a small display stops being a constraint you're fighting.
 
-Start to finish, including styling and keybind customisation, the whole thing took about
+Start to finish, including styling and keybind customization, the whole thing took about
 three hours. That number is the honest answer to "is Arch a lot of work," and it's lower
 than the folklore suggests, on hardware this well documented.
 
@@ -74,13 +74,6 @@ copy-pasted config will be subtly wrong in a way that's maddening to debug.
 And macOS is gone. I wiped it rather than shrinking a partition for a dual boot, which
 in hindsight was obviously correct. See below.
 
-TODO: if the Broadcom driver package name comes back to you, name it. `brcmfmac` (the
-in-kernel driver, as against the much larger `broadcom-wl`) would fit your description
-of "smaller and newer," but I'm not going to assert it on your behalf.
-
-Each of these is a sentence, and the sentences are the reason someone would read this
-post rather than the Arch wiki.
-
 ## What it's actually good for
 
 This is not my primary work machine and I'm not going to pretend it is. What it turned
@@ -106,7 +99,7 @@ one decision I might otherwise have got wrong.
 So the transferable lesson isn't about Arch. It's that "old hardware" and "difficult
 hardware" are close to opposites, and choosing a machine whose problems are already
 solved is worth more than any amount of preparation. If I'd tried this on a two-year-old
-laptop, this section would be long.
+laptop, this section might have been alot longer.
 
 The one thing I'd tell someone starting: read your own keycodes before writing keyboard
 config, and read the model-specific wiki page all the way through before you begin

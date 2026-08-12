@@ -125,7 +125,3 @@ And treat the whole set as code: reviewed, versioned, updated when reality moves
 moment it becomes documentation nobody maintains, it's worse than the tribal knowledge
 it replaced, because tribal knowledge at least knows it's uncertain.
 
-I should be clear about the evidence here. I have no numbers: no review-turnaround
-measurement, no onboarding-time comparison, no defect counts before and after. What I
-have is a strong impression from the inside plus the observation that nobody has
-proposed going back. Read the whole post as anecdote, because that's what it is.

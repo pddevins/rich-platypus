@@ -71,7 +71,7 @@ the first half.
 The obvious objection is that this is self-indulgent, a list of hobbies dressed up as
 growth, and that a more disciplined man would have spent the hours on something that
 compounds. I believed that in March. I don't any more, and the reason is the returns
-rather than the beginnings. Starting something is easy to romanticise; you're allowed to
+rather than the beginnings. Starting something is easy to romanticize; you're allowed to
 be bad, the only direction is up, and nobody expects anything of you. Going back to
 something you were once better at offers none of that. You get to meet a previous
 version of yourself who could do the thing, and keep going anyway. That's not a hobby

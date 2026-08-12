@@ -50,7 +50,7 @@ passwords need to be considered public.
 
 **4. Username correlation across platforms.** A distinctive handle reused across
 services links accounts you may not have intended to associate. This is the single most
-common way an otherwise careful person gets deanonymised, and it's usually a decade of
+common way an otherwise careful person gets deanonymized, and it's usually a decade of
 accumulated habit.
 
 **5. Your own published material.** Photograph EXIF data, document metadata, commit
@@ -103,7 +103,7 @@ most of yours is not under your control.
 Ordered by benefit per unit of effort, because the temptation is to start with the
 technical work and the technical work is not where the exposure is.
 
-**Opt out of the brokers, and diarise it.** This is tedious, effective, and
+**Opt out of the brokers, and put a reminder in the calendar.** This is tedious, effective, and
 impermanent. Records repopulate from upstream sources, so an annual pass is required. It
 is the highest-value item on this list and the one people skip because it's boring.
 

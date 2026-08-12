@@ -22,7 +22,7 @@ material for healthcare professionals and patients, across multiple countries, w
 every asset has to be legally compliant in the jurisdiction it's used and every claim
 has to be traceable to something approved.
 
-That last constraint is the one that reorganises everything. In an ordinary content
+That last constraint is the one that reorganizes everything. In an ordinary content
 system, a user makes something and publishes it. Here, a user assembles something from
 approved components, and the system's real job is to make the compliant path the easy
 path, because if it's not, people will do the work in Word and email it around, and
