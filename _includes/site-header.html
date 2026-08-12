@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="wordmark" href="{{ '/' | relative_url }}">
+      <span class="wordmark__name">{{ site.title | escape }}</span>
+      {%- if site.tagline %}
+      <span class="wordmark__tagline">{{ site.tagline | escape }}</span>
+      {%- endif %}
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a href="{{ '/writing/' | relative_url }}"{% if page.url == '/writing/' %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ '/topics/' | relative_url }}"{% if page.url == '/topics/' %} aria-current="page"{% endif %}>Topics</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/feed.xml' | relative_url }}" class="nav__feed" title="Atom feed">Feed</a>
+    </nav>
+  </div>
+</header>

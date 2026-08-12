@@ -1,0 +1,41 @@
+---
+layout: page
+title: Topics
+subtitle: Everything here is filed under exactly one of these.
+permalink: /topics/
+---
+
+<ul class="topic-jump">
+  {%- for cat in site.data.taxonomy.categories %}
+  <li><a href="#{{ cat.slug }}">{{ cat.label }}</a></li>
+  {%- endfor %}
+</ul>
+
+{%- for cat in site.data.taxonomy.categories %}
+  {%- assign posts = site.categories[cat.slug] -%}
+  <section class="topic" id="{{ cat.slug }}">
+    <div class="topic__head">
+      <h2 class="topic__label">
+        {{ cat.label }}
+        <span class="topic__count">{{ posts | size | default: 0 }}</span>
+      </h2>
+    </div>
+
+    {%- if cat.description %}
+    <p class="topic__description">{{ cat.description }}</p>
+    {%- endif %}
+
+    {%- if posts and posts.size > 0 %}
+    <ol class="index-list">
+      {%- for post in posts %}
+      <li class="index-item index-item--{{ post.kind | default: 'post' }}">
+        <time class="index-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+        <a class="index-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- else %}
+    <p class="topic__empty">Nothing here yet.</p>
+    {%- endif %}
+  </section>
+{%- endfor %}

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<div class="wrap">
+  <article class="page">
+    <header class="page__header">
+      <h1 class="page__title">{{ page.title | escape }}</h1>
+      {%- if page.subtitle %}
+      <p class="page__standfirst">{{ page.subtitle | escape }}</p>
+      {%- endif %}
+    </header>
+
+    {%- if content and content != '' %}
+    <div class="prose">{{ content }}</div>
+    {%- endif %}
+
+    {%- if site.posts.size == 0 %}
+    <p class="empty">Nothing published yet.</p>
+    {%- else %}
+      {%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+      {%- for year in years %}
+      <section class="year">
+        <h2 class="year__label">{{ year.name }}</h2>
+        <ol class="index-list">
+          {%- for post in year.items %}
+          <li class="index-item index-item--{{ post.kind | default: 'post' }}">
+            <time class="index-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b" }}</time>
+            <a class="index-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {%- assign cat_slug = post.categories | first -%}
+            {%- if cat_slug %}
+            {%- assign cat = site.data.taxonomy.categories | where: "slug", cat_slug | first -%}
+            <span class="index-item__cat">{% if cat %}{{ cat.label }}{% else %}{{ cat_slug }}{% endif %}</span>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endfor %}
+    {%- endif %}
+  </article>
+</div>

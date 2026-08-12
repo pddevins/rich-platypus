@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body class="layout-{{ page.layout | default: 'default' }}{% if page.kind %} kind-{{ page.kind }}{% endif %}">
+  {%- include site-header.html -%}
+
+  <main id="main" class="main">
+    {{ content }}
+  </main>
+
+  {%- include site-footer.html -%}
+</body>
+</html>

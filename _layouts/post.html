@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<div class="wrap">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post__header">
+      <h1 class="post__title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      {%- if page.subtitle %}
+      <p class="post__standfirst">{{ page.subtitle | escape }}</p>
+      {%- endif %}
+      {%- include post-meta.html post=page -%}
+    </header>
+
+    <div class="prose e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <footer class="post__footer">
+      {%- assign cat_slug = page.categories | first -%}
+      {%- assign cat = site.data.taxonomy.categories | where: "slug", cat_slug | first -%}
+      {%- if cat %}
+      <p class="post__filed">
+        Filed under <a href="{{ '/topics/#' | append: cat.slug | relative_url }}">{{ cat.label }}</a>.
+        {%- if cat.description %} {{ cat.description }}{% endif %}
+      </p>
+      {%- endif %}
+
+      {%- if page.tags and page.tags.size > 0 %}
+      <ul class="tags" aria-label="Tags">
+        {%- for tag in page.tags %}
+        <li class="tag">{{ tag }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+
+      {%- if page.previous or page.next %}
+      <nav class="post-nav" aria-label="More posts">
+        {%- if page.previous %}
+        <a class="post-nav__link post-nav__link--prev" href="{{ page.previous.url | relative_url }}">
+          <span class="post-nav__label">Previous</span>
+          <span class="post-nav__title">{{ page.previous.title | escape }}</span>
+        </a>
+        {%- endif %}
+        {%- if page.next %}
+        <a class="post-nav__link post-nav__link--next" href="{{ page.next.url | relative_url }}">
+          <span class="post-nav__label">Next</span>
+          <span class="post-nav__title">{{ page.next.title | escape }}</span>
+        </a>
+        {%- endif %}
+      </nav>
+      {%- endif %}
+    </footer>
+  </article>
+</div>

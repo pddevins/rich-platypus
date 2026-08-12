@@ -1,0 +1,18 @@
+<footer class="colophon">
+  <div class="colophon__inner">
+    <p class="colophon__note">
+      Written by {{ site.author.name | escape }}. Set in system serif, built with
+      Jekyll, served as static files. No trackers, no webfonts, no cookies.
+    </p>
+    <ul class="colophon__links">
+      <li><a href="{{ '/feed.xml' | relative_url }}">Atom feed</a></li>
+      {%- if site.github_username %}
+      <li><a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a></li>
+      {%- endif %}
+      {%- if site.email %}
+      <li><a href="mailto:{{ site.email }}">Email</a></li>
+      {%- endif %}
+    </ul>
+    <p class="colophon__meta">&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | escape }}</p>
+  </div>
+</footer>

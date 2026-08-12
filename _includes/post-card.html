@@ -1,0 +1,22 @@
+{%- comment -%}
+  Params: post (required)
+  A `note` gets a compact card with no excerpt; everything else gets a
+  standfirst (front matter `subtitle`, falling back to the excerpt).
+{%- endcomment -%}
+{%- assign post = include.post -%}
+
+<article class="card card--{{ post.kind | default: 'post' }}">
+  <h2 class="card__title">
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </h2>
+
+  {%- include post-meta.html post=post -%}
+
+  {%- if post.kind != 'note' -%}
+    {%- if post.subtitle -%}
+      <p class="card__standfirst">{{ post.subtitle | escape }}</p>
+    {%- elsif post.excerpt -%}
+      <p class="card__standfirst">{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 34 }}</p>
+    {%- endif -%}
+  {%- endif -%}
+</article>

@@ -1,0 +1,108 @@
+# ---------------------------------------------------------------------------
+# The controlled vocabulary for this blog.
+#
+# Two independent axes:
+#   kind     - what shape the piece is (drives layout + presentation)
+#   category - what it is about (drives topic pages; exactly ONE per post)
+#
+# Tags are free-form and secondary. Add a category here BEFORE using it in a
+# post: layouts read labels from this file, and an unlisted category renders
+# as a bare slug.
+#
+# Category `description` is rendered in two places -- on /topics/ and in the
+# post footer as "Filed under <label>. <description>" -- so write each one as a
+# complete sentence.
+# ---------------------------------------------------------------------------
+
+kinds:
+  - slug: post
+    label: Post
+    plural: Posts
+    words: 1500-3000
+    description: >-
+      Long-form technical or opinion piece. Sections with subheads, a clear
+      thesis up front, and a takeaway at the end.
+  - slug: essay
+    label: Essay
+    plural: Essays
+    words: 800-1500
+    description: >-
+      One argument, carried straight through. No subheads, no listicles.
+      Rendered with a drop cap.
+  - slug: note
+    label: Note
+    plural: Notes
+    words: 100-500
+    description: >-
+      A thought captured fast, or a TIL. Allowed to be incomplete. May later
+      be promoted to a post or essay.
+  - slug: log
+    label: Build log
+    plural: Build logs
+    words: 600-2000
+    description: >-
+      What I built, what broke, what I would do differently. Chronological,
+      with real commands and real error messages.
+
+categories:
+  - slug: privacy
+    label: Privacy
+    description: Threat surfaces, security assessments, digital rights, and anti-surveillance.
+  - slug: homelab
+    label: Homelab
+    description: Proxmox, self-hosted media and file storage, and the networking underneath.
+  - slug: electronics
+    label: Electronics
+    description: Arduino, Raspberry Pi, LoRa, and whatever is currently on the bench.
+  - slug: engineering
+    label: Engineering
+    description: Development workflows, AI tooling, and the craft of shipping.
+  - slug: leadership
+    label: Leadership
+    description: Consulting, leading teams, and how decisions actually get made.
+  - slug: thinking
+    label: Critical thinking
+    description: Evaluation, epistemics, and checking what a claim actually rests on.
+  - slug: misc
+    label: Miscellany
+    description: Everything that refuses to sit in another bucket.
+
+# Suggested tags. Not enforced -- reuse before inventing.
+tags:
+  # privacy
+  - anonymity
+  - digital-rights
+  - encryption
+  - threat-modeling
+  - surveillance
+  # homelab
+  - self-hosting
+  - proxmox
+  - networking
+  - zfs
+  - backups
+  - media-server
+  - docker
+  - linux
+  # electronics
+  - arduino
+  - raspberry-pi
+  - lora
+  - soldering
+  - sensors
+  # engineering
+  - ai-tooling
+  - developer-experience
+  - observability
+  - rust
+  - jekyll
+  # leadership
+  - consulting
+  - hiring
+  - decision-making
+  # critical thinking
+  - epistemics
+  - evaluation
+  - philosophy
+  # cross-cutting
+  - til

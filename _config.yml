@@ -1,53 +1,96 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# ---------------------------------------------------------------------------
+# Site identity
+# ---------------------------------------------------------------------------
 title: Thoughts & Ramblings
-email: patrick@devins.me
-description: >- # this means to ignore newlines until "baseurl:"
-  A blog about random stuff.
-baseurl: "/" # the subpath of your site, e.g. /blog
-domain: blog.devins.me
-url: "https://blog.devins.me" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: pddevins 
+tagline: Servers, circuits, and arguments that have to hold up.
+description: >-
+  Patrick Devins on homelabbing and self-hosting, small electronics, privacy and
+  anti-surveillance, development workflows, and the leadership side of
+  engineering — with a philosopher's habit of checking the reasoning.
 
-# Build settings
-theme: minima
+url: "https://blog.devins.me"
+baseurl: ""
+domain: blog.devins.me
+
+email: patrick@devins.me
+github_username: pddevins
+
+author:
+  name: Patrick Devins
+  email: patrick@devins.me
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+# No `theme:` key on purpose. This site ships its own _layouts, _includes and
+# stylesheet, so nothing is inherited from minima (which stays in the Gemfile
+# only to keep the github-pages bundle resolvable).
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  # Lets a moved post keep its old URL via `redirect_from:` in front matter.
+  # Bundled with the github-pages gem, so no Gemfile change is needed.
+  - jekyll-redirect-from
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+permalink: /:year/:month/:title/
+
+# Pin the build timezone. GitHub Pages builds in UTC; without this, a post dated
+# late in the evening local time rolls over to the next UTC day and its
+# permalink silently changes between a local build and the deployed one.
+timezone: America/New_York
+
+sass:
+  style: compressed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+  footnote_backlink: "&#8617;&#xfe0e;"
+
+# Show newest first, and expose a stable excerpt boundary for post cards.
+excerpt_separator: "<!--more-->"
+
+feed:
+  path: feed.xml
+
+# ---------------------------------------------------------------------------
+# Front matter defaults
+# ---------------------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      kind: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# ---------------------------------------------------------------------------
+# Exclude
+# ---------------------------------------------------------------------------
+# IMPORTANT: GitHub Pages enables jekyll-optional-front-matter, which turns any
+# stray root-level .md file into a published page. Every authoring/agent doc
+# must be listed here or it will end up on the public site.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - docs/            # authoring docs, not site content
+  - Gemfile
+  - Gemfile.lock
+  - package-lock.json
+  - package.json
+  - node_modules/
+  - vendor/
+  - .github/
+  - .claude/
+  - .jekyll-cache/
+# NOTE: _drafts/ is deliberately NOT excluded. Jekyll already skips it on a
+# normal build; leaving it out of this list is what lets
+# `bundle exec jekyll serve --drafts` preview work in progress.

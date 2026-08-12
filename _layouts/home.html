@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="wrap">
+  {%- if content and content != '' %}
+  <section class="intro prose">
+    {{ content }}
+  </section>
+  {%- endif %}
+
+  {%- assign posts = site.posts -%}
+  {%- if posts.size > 0 %}
+  <section class="feed" aria-labelledby="latest">
+    <h1 class="section-heading" id="latest">Latest</h1>
+
+    <div class="cards">
+      {%- for post in posts limit: 12 %}
+        {%- include post-card.html post=post -%}
+      {%- endfor %}
+    </div>
+
+    {%- if posts.size > 12 %}
+    <p class="more"><a href="{{ '/writing/' | relative_url }}">All {{ posts.size }} pieces &rarr;</a></p>
+    {%- endif %}
+  </section>
+  {%- else %}
+  <section class="feed">
+    <p class="empty">Nothing published yet. Drafts are piling up in <code>_drafts/</code>.</p>
+  </section>
+  {%- endif %}
+</div>

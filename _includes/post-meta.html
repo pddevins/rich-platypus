@@ -1,0 +1,25 @@
+{%- comment -%}
+  Params: post (required)
+  Renders the small-caps dateline: CATEGORY · DATE · READING TIME
+{%- endcomment -%}
+{%- assign post = include.post -%}
+{%- assign cat_slug = post.categories | first -%}
+{%- assign cat = site.data.taxonomy.categories | where: "slug", cat_slug | first -%}
+{%- assign words = post.content | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | plus: 1 -%}
+
+<p class="dateline">
+  {%- if cat_slug %}
+  <a class="dateline__cat" href="{{ '/topics/#' | append: cat_slug | relative_url }}">{% if cat %}{{ cat.label }}{% else %}{{ cat_slug }}{% endif %}</a>
+  <span class="dateline__sep" aria-hidden="true">&middot;</span>
+  {%- endif %}
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+  {%- if post.kind and post.kind != 'post' %}
+  <span class="dateline__sep" aria-hidden="true">&middot;</span>
+  <span class="dateline__kind">{{ post.kind }}</span>
+  {%- endif %}
+  {%- if minutes > 1 %}
+  <span class="dateline__sep" aria-hidden="true">&middot;</span>
+  <span>{{ minutes }} min</span>
+  {%- endif %}
+</p>
