@@ -1,41 +1,60 @@
 ---
 layout: page
 title: Topics
-subtitle: Everything here is filed under exactly one of these.
+subtitle: Everything published here is filed under exactly one of these.
 permalink: /topics/
 ---
 
-<ul class="topic-jump">
-  {%- for cat in site.data.taxonomy.categories %}
-  <li><a href="#{{ cat.slug }}">{{ cat.label }}</a></li>
-  {%- endfor %}
-</ul>
+{%- comment -%}
+  Only categories with at least one published post are rendered. Empty ones are
+  hidden rather than shown as "nothing here yet" -- the taxonomy in
+  _data/taxonomy.yml deliberately runs ahead of what's written, so most of it is
+  empty most of the time.
+{%- endcomment -%}
 
-{%- for cat in site.data.taxonomy.categories %}
+{%- assign live = "" | split: "" -%}
+{%- for cat in site.data.taxonomy.categories -%}
   {%- assign posts = site.categories[cat.slug] -%}
-  <section class="topic" id="{{ cat.slug }}">
-    <div class="topic__head">
-      <h2 class="topic__label">
-        {{ cat.label }}
-        <span class="topic__count">{{ posts | size | default: 0 }}</span>
-      </h2>
-    </div>
+  {%- if posts and posts.size > 0 -%}
+    {%- assign live = live | push: cat -%}
+  {%- endif -%}
+{%- endfor -%}
 
-    {%- if cat.description %}
-    <p class="topic__description">{{ cat.description }}</p>
-    {%- endif %}
+{%- if live.size == 0 %}
+  <p class="empty">Nothing published yet. Topics appear here as posts land in them.</p>
+{%- else %}
 
-    {%- if posts and posts.size > 0 %}
-    <ol class="index-list">
-      {%- for post in posts %}
-      <li class="index-item index-item--{{ post.kind | default: 'post' }}">
-        <time class="index-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
-        <a class="index-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </li>
-      {%- endfor %}
-    </ol>
-    {%- else %}
-    <p class="topic__empty">Nothing here yet.</p>
-    {%- endif %}
-  </section>
-{%- endfor %}
+  {%- if live.size > 1 %}
+  <ul class="topic-jump">
+    {%- for cat in live %}
+    <li><a href="#{{ cat.slug }}">{{ cat.label }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- for cat in live %}
+    {%- assign posts = site.categories[cat.slug] -%}
+    <section class="topic" id="{{ cat.slug }}">
+      <div class="topic__head">
+        <h2 class="topic__label">
+          {{ cat.label }}
+          <span class="topic__count">{{ posts | size }}</span>
+        </h2>
+      </div>
+
+      {%- if cat.description %}
+      <p class="topic__description">{{ cat.description }}</p>
+      {%- endif %}
+
+      <ol class="index-list">
+        {%- for post in posts %}
+        <li class="index-item index-item--{{ post.kind | default: 'post' }}">
+          <time class="index-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+          <a class="index-item__title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+  {%- endfor %}
+
+{%- endif %}

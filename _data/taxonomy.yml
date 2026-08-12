@@ -18,14 +18,22 @@ kinds:
   - slug: post
     label: Post
     plural: Posts
-    words: 1500-3000
+    words: 650-3000
     description: >-
       Long-form technical or opinion piece. Sections with subheads, a clear
       thesis up front, and a takeaway at the end.
+  - slug: brief
+    label: Brief
+    plural: Briefs
+    words: 400-900
+    description: >-
+      Short technical piece with a single job: release notes, an upgrade path,
+      one comparison. Subheads allowed, unlike a note. No thesis required --
+      it's reference, not argument.
   - slug: essay
     label: Essay
     plural: Essays
-    words: 800-1500
+    words: 600-1500
     description: >-
       One argument, carried straight through. No subheads, no listicles.
       Rendered with a drop cap.
@@ -63,6 +71,9 @@ categories:
   - slug: thinking
     label: Critical thinking
     description: Evaluation, epistemics, and checking what a claim actually rests on.
+  - slug: personal
+    label: Personal
+    description: Year-end reflections, hobbies, and the non-technical half of the tinkering.
   - slug: misc
     label: Miscellany
     description: Everything that refuses to sit in another bucket.
@@ -75,6 +86,9 @@ tags:
   - encryption
   - threat-modeling
   - surveillance
+  - osint
+  - email
+  - dns
   # homelab
   - self-hosting
   - proxmox
@@ -84,6 +98,9 @@ tags:
   - media-server
   - docker
   - linux
+  - nextcloud
+  - home-assistant
+  - pihole
   # electronics
   - arduino
   - raspberry-pi
@@ -96,10 +113,28 @@ tags:
   - observability
   - rust
   - jekyll
+  - php
+  - laravel
+  - testing
+  - tdd
+  - mysql
+  - browsers
+  - payments
+  - arch-linux
   # leadership
   - consulting
   - hiring
   - decision-making
+  - mentorship
+  - career
+  - teams
+  # electronics / education
+  - stem
+  - education
+  - scratch
+  # personal
+  - reflection
+  - tinkering
   # critical thinking
   - epistemics
   - evaluation
