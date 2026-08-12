@@ -169,10 +169,7 @@ made the first 80% possible.
 
 Finishing is the whole point, though, and I want to get there. The goal was never a large
 collection of files. It was having everything I already own in one place, under my
-control, playable without asking anyone. At 80% I still reach for Spotify to cover the
-gaps, which means I am still renting access to music that is sitting on a shelf ten feet
-away. That is the part I want to stop doing.
+control, playable without asking anyone. At 80% I still reach for Spotify every now and 
+then to cover the gaps, which means I am still renting access to music that is sitting 
+on a shelf ten feet away. That is the part I want to stop doing.
 
-TODO: any other real regrets on process? All three decisions above were yours and were
-correct, so "what I'd do differently" is carrying only the subtitle point. A thin regrets
-section is fine if that's the truth, but if something else annoyed you it belongs here.
