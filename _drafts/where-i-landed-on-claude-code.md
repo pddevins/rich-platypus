@@ -41,7 +41,7 @@ wanted before I started.
 What changed is that I stopped using it to write features and started using it to
 interrogate them.
 
-## The thing it's actually good at
+## The thing it's good at
 
 The capability that won me over is finding interactions I wouldn't have looked for.
 
@@ -49,7 +49,7 @@ A change to a service touches a queued job that touches an observer that fires o
 model that a scheduled command also updates. In a mature application these chains exist
 in numbers no one holds in their head, and traditional workflows catch them through a
 combination of tests, review, and eventually production. What I get now is a systematic
-pass over the actual call graph, asking what else touches this — and it surfaces the
+pass over the actual call graph, asking what else touches this, and it surfaces the
 esoteric ones. Not the obvious dependencies, which I'd find. The fourth-order ones that
 historically fell through the gaps and turned up six weeks later as a bug nobody could
 reproduce.
@@ -67,17 +67,17 @@ it wasn't what anyone was looking for. It surfaced because the sweep didn't know
 supposed to stay on topic.
 
 That's the shape of the value. Not "wrote my feature." Found a latent runtime error in a
-code path adjacent to the one I was actually working in.
+code path adjacent to the one I was working in.
 
 Edge cases follow the same pattern. Asking what inputs break this, with an instruction to be
 exhaustive rather than helpful, produces a list where most items are irrelevant and two are
 things I hadn't considered. The hit rate is low and the cost of reading a list is also low,
-which is a fine trade — it's the inverse of the code-generation trade I objected to, where
+which is a fine trade. It's the inverse of the code-generation trade I objected to, where
 the cost of evaluating the output was high.
 
 The other category worth naming is specification ambiguity caught at planning time. A
 requested report asked for a total "sold online," which sounds unambiguous until you notice
-the data model has no online/offline distinction in it at all — every sale is simply a sale.
+the data model has no online/offline distinction in it at all. Every sale is simply a sale.
 The number was computable, but it could not mean what the person asking believed it meant.
 Surfacing that during planning cost a conversation. Surfacing it after delivery would have
 cost trust in every figure on the page.
@@ -109,7 +109,7 @@ conventions appears in seconds rather than minutes, and the review pass describe
 would take me an hour by hand.
 
 The losses are also real, and they're lumpier. There are sessions where I spend hours
-iterating on a feature — refining, correcting, re-explaining — and end up discarding all of
+iterating on a feature (refining, correcting, re-explaining) and end up discarding all of
 it and writing the thing myself in forty minutes. Those are expensive precisely because they
 don't feel like failure while they're happening. Each iteration looks like progress. The sunk
 cost accumulates quietly, and the point at which I should have stopped is only visible
@@ -120,8 +120,8 @@ fifth is a write-off. I'd expected that ratio to improve as I got better at this
 mostly hasn't — what's improved is how quickly I recognise which kind of session I'm in.
 
 The gaps are usually comprehension gaps. When a feature depends on understanding *why*
-the application is shaped a particular way — a constraint that lives in a client
-conversation, a deliberate inconsistency with a reason — the output will be locally
+the application is shaped a particular way (a constraint that lives in a client
+conversation, a deliberate inconsistency with a reason) the output will be locally
 sensible and globally wrong, and no amount of further refining fixes it, because the
 missing thing isn't in the codebase to be found.
 

@@ -37,8 +37,8 @@ cheaper way to discover your problems than a failed migration.
 `utf8mb4_unicode_ci` or `utf8mb4_general_ci`.
 
 The trap is that this doesn't break on upgrade. Existing tables keep their old
-collation, so everything works. Then someone creates a new table — a migration, a new
-feature, a new environment built fresh — and it gets the 8.0 default. Now you have two
+collation, so everything works. Then someone creates a new table (a migration, a new
+feature, a new environment built fresh) and it gets the 8.0 default. Now you have two
 collations in one schema, and the first join between an old table and a new one fails:
 
 ```
@@ -49,13 +49,12 @@ Illegal mix of collations (utf8mb4_unicode_ci,IMPLICIT) and
 This surfaces weeks after the upgrade, in whichever feature happened to touch both
 tables, and it looks like an application bug rather than an infrastructure decision.
 
-Pick one collation and set it explicitly — server, database, and every migration. The
+Pick one collation and set it explicitly: server, database, and every migration. The
 decision matters less than the consistency. If you have the appetite, converting
 everything to `utf8mb4_0900_ai_ci` is the forward-looking choice; if you don't, pin
 the server default back to what your tables already use and move on.
 
-Sorting also changes with collation, so anything asserting a specific string order —
-a test, a paginated list, a report — may legitimately change output. That's correct
+Sorting also changes with collation, so anything asserting a specific string order (a test, a paginated list, a report) may legitimately change output. That's correct
 behaviour and it will still be reported as a regression.
 
 ## Authentication
@@ -92,29 +91,29 @@ is the one that doesn't recur.
 
 Worth knowing what you're buying, since the above is all cost:
 
-- **Window functions** — `ROW_NUMBER()`, `RANK()`, `LAG()`. A large class of query
-  that previously needed a self-join or application-side work.
+- **Window functions**. `ROW_NUMBER()`, `RANK()`, `LAG()`. A large class of query
+ that previously needed a self-join or application-side work.
 - **Common table expressions**, including recursive ones. Hierarchies stop being
-  painful.
+ painful.
 - **Atomic DDL.** A failed `ALTER` no longer leaves you half-migrated.
 - **Real `JSON` improvements**, including `JSON_TABLE`.
 - **`utf8mb3` is deprecated**, which is a nudge to finish a migration you probably
-  started years ago.
+ started years ago.
 
 ## The order I'd do it in
 
 1. Run the upgrade checker and fix everything it names.
 2. Decide the collation question deliberately, and write it into your migration
-   defaults and framework config before you upgrade rather than after.
-3. Upgrade a staging copy from a production dump. Not a fresh schema — a dump, because
-   the interesting failures live in data and legacy DDL.
+ defaults and framework config before you upgrade rather than after.
+3. Upgrade a staging copy from a production dump. Not a fresh schema but a dump, because
+ the interesting failures live in data and legacy DDL.
 4. Run the full test suite, then specifically exercise anything asserting string
-   ordering.
+ ordering.
 5. Sort out client auth, with a deadline if you're deferring it.
 6. Upgrade production, keeping the 5.7 binaries available for a rollback path.
 
 That last step is written from a self-hosted position, which is where I've done all of
-these. Self-hosting means the rollback is genuinely yours: keep the old binaries and a
+these. Self-hosting means the rollback is yours: keep the old binaries and a
 pre-upgrade dump, and you can go backwards. On managed MySQL you're working with the
 provider's snapshot-and-restore mechanics instead, which are usually reliable and are
 not the same thing as being able to start the old server.

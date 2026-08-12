@@ -57,7 +57,7 @@ a second thing to maintain for no benefit I could identify, so I didn't.
 One piece of received wisdom I can't confirm: Zigbee coordinators are said to need a USB
 extension cable to get the radio away from interference from USB 3 ports and the chassis. I
 didn't use one and never had the problem. That may be luck, or it may be that this
-particular combination of coordinator and host doesn't suffer from it — but I'm not going to
+particular combination of coordinator and host doesn't suffer from it, but I'm not going to
 repeat the advice as though I'd verified it. If your mesh is unreliable, try the cable. If
 it isn't, don't go looking for a fix.
 
@@ -76,7 +76,7 @@ The practical consequence is that it changes what you buy. Local-first support i
 the first thing I check, ahead of price and features, and it rules out a lot of
 otherwise reasonable hardware.
 
-## What it actually does
+## What it does
 
 Three categories, roughly in order of how much they get used.
 
@@ -95,7 +95,7 @@ because the genre this post belongs to is full of dashboards with four hundred o
 
 The one that has unambiguously earned its place is the HVAC temperature schedule. In a
 Florida summer, cooling is the electricity bill, and a schedule that follows when the house
-is actually occupied rather than a fixed programme has been the single clearest saving in
+is occupied rather than a fixed programme has been the single clearest saving in
 the whole setup. Not a clever automation. A thermostat that knows what day it is.
 
 I'd rather have six things that work than sixty I'm debugging, and the six get used daily by
@@ -106,8 +106,8 @@ people who have no idea Home Assistant exists.
 The tablets, which is fitting, since they're the reason I started this four years ago.
 
 A Fire 7 running LineageOS makes a fine wall panel and a poor kiosk. The hardware wants to
-behave like a tablet — sleep the screen, drop the wifi to save power, background the
-browser — and a wall display needs the opposite of all three. Getting a dashboard to stay
+behave like a tablet (sleep the screen, drop the wifi to save power, background the
+browser) and a wall display needs the opposite of all three. Getting a dashboard to stay
 up, stay awake, and reconnect after the access point blips is a set of small fights rather
 than one configuration change.
 

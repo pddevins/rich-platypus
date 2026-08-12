@@ -9,7 +9,7 @@ tags: [tinkering, raspberry-pi, linux, self-hosting]
 published: false
 ---
 
-I haven't posted in about a year. The year wasn't idle — it was just spent on
+I haven't posted in about a year. The year wasn't idle. It was just spent on
 things that never quite reached the threshold where I'd sit down and write them up.
 Collected together, though, they add up to a reasonable picture of what I do when
 nobody assigns it.
@@ -33,7 +33,7 @@ project, and it's the part nobody's tutorial covers.
 ## Billy Beats, almost
 
 A Mega Bloks Billy Beats dancing piano robot, which stopped dancing. Opening it up
-showed several connections that had cooked — visibly browned, one lifted clean off
+showed several connections that had cooked: visibly browned, one lifted clean off
 its pad.
 
 I resoldered what I could reach. It came back partway: sound returned, and one
@@ -59,8 +59,8 @@ live because those locations haven't moved in years. That combination is what ma
 "set it and forget it" an actual property rather than a slogan.
 
 The consequence that mattered most was environment replication. When the conventions
-are stable and the install is deterministic, standing up an identical machine — or
-rebuilding the one you have after doing something unwise to it — stops being an
+are stable and the install is deterministic, standing up an identical machine, or
+rebuilding the one you have after doing something unwise to it, stops being an
 afternoon of reconstruction from memory. Being able to reproduce a working setup is
 most of the value of having settled on one at all.
 
@@ -87,7 +87,7 @@ indefinitely, and never decide to show you a lock-screen advertisement.
 The value isn't technical, though. It's that a wall-mounted screen showing the
 calendar gets looked at by everyone in the household, including people who would
 never open an app to check the same information. Ambient beats on-demand for
-anything genuinely shared.
+anything shared.
 
 ## A hammer and a scribe, from scraps
 
@@ -106,7 +106,7 @@ now know what I want out of a mallet, having used one that I got slightly wrong.
 
 Hotel and conference wifi is a hostile network you have to use anyway. A small
 travel router, configured once, means every device I carry joins my network
-instead of theirs — one VPN tunnel at the router, and the laptop and phone don't
+instead of theirs. One VPN tunnel at the router, and the laptop and phone don't
 each need to be trusted to do the right thing.
 
 The hardware is a GL.iNet travel router, reflashed with vanilla OpenWrt rather than
@@ -131,11 +131,11 @@ The experiment was whether I could do real work on a remote server with Neovim
 instead of a local editor.
 
 The appeal was never portability in the abstract. It's that the environment stops
-being tied to the laptop in front of me — same setup from any machine, and the
+being tied to the laptop in front of me. Same setup from any machine, and the
 project's dependencies live where the project lives instead of accumulating on my
 desktop.
 
-Half of it stuck. Neovim did — the first fortnight cost me real speed, and I've used
+Half of it stuck. Neovim did. The first fortnight cost me real speed, and I've used
 it ever since. The remote box didn't survive the year.
 
 The reason is mundane enough to be worth recording. The friction wasn't the editor,
@@ -146,14 +146,13 @@ answers is a second environment to maintain alongside the first one.
 
 So the useful outcome was the opposite of the hypothesis. I went looking for a
 development environment that wasn't tied to a particular machine, and what I kept was
-an editor that's identical on every machine — which delivers most of what I actually
-wanted, without the tax.
+an editor that's identical on every machine, which delivers most of what I wanted without the tax.
 
 ---
 
 Looking at these together, the through-line isn't technology. Four of the seven are
-about taking something sealed — a toy, a tablet, a laptop's operating system, a
-hotel network — and making it answer to me instead. The hammer is the same
+about taking something sealed (a toy, a tablet, a laptop's operating system, a
+hotel network) and making it answer to me instead. The hammer is the same
 instinct with the electronics removed.
 
 That's a reasonable thing to notice about a year, and probably a better reason to

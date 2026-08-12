@@ -12,7 +12,7 @@ published: false
 Email is a protocol from 1982 with encryption bolted on in several incompatible ways,
 and no provider can change that unilaterally. What Tuta and Proton actually sell is not
 encrypted email. It's a mailbox whose operator cannot read it, which is a different and
-much more limited claim — and one that's still worth paying for, once you know which
+much more limited claim, and one that's still worth paying for, once you know which
 threat it addresses.
 
 <!--more-->
@@ -20,12 +20,10 @@ threat it addresses.
 ## The thing that can't be fixed
 
 When you send mail to someone on Gmail, that message arrives on Google's servers and
-Google can read it. This is true regardless of your provider. It is true if you use
-Tuta, Proton, your own server, or a machine in a vault.
+Google can read it. This is true regardless of your provider. It holds whether you use Tuta, Proton, your own server, or a machine in a vault.
 
-SMTP has no transport-agnostic end-to-end encryption. TLS between servers protects the
-hop, not the contents at rest on the other end. So the moment your correspondent is on
-a mainstream provider — which is nearly always — the confidentiality of that
+SMTP has no transport-agnostic end-to-end encryption. TLS between servers protects the hop rather than the contents at rest on the other end, so the moment your correspondent is on
+a mainstream provider, which is nearly always, the confidentiality of that
 conversation is set by their provider, not yours.
 
 Both companies are honest about this if you read carefully, and both market in a way
@@ -39,10 +37,10 @@ feature.
 Four things, and it's worth naming them separately because they have different value
 depending on who you're worried about.
 
-**The operator can't read your mailbox.** Contents are encrypted at rest with keys
-derived from your password. This defeats a specific and real adversary: the provider
-itself, scanning your mail for advertising or model training. Against Google, this is
-the entire point, and it's sufficient reason on its own.
+**The operator can't read your mailbox.** Contents are encrypted at rest with keys derived
+from your password, which defeats a specific and real adversary: the provider itself,
+scanning your mail for advertising or model training. Against Google that is sufficient
+reason on its own.
 
 **A server-side breach yields less.** Encrypted-at-rest mail stolen from a provider is
 considerably less useful than plaintext. Given how routinely providers are breached,
@@ -66,7 +64,7 @@ They're grouped together and they've made genuinely different trade-offs.
 properly encrypted mail with anyone using PGP outside Proton, and it offers IMAP and
 SMTP through a local bridge so you can keep using a normal mail client. That makes it
 usable inside an existing workflow, and it means the encryption is a standard rather
-than a proprietary scheme. It's also a wider suite — calendar, drive, VPN — which is
+than a proprietary scheme. It's also a wider suite (calendar, drive, VPN) which is
 convenient and is also more of your life in one basket.
 
 **Tuta** optimises for encrypting more. It encrypts the subject line and the address book,
@@ -90,12 +88,11 @@ mailbox, and asks you to live in their ecosystem to get it.
 **Metadata:** neither can fix it. Sender, recipient, and timestamps have to be readable
 by the machines routing the mail.
 
-## Who this is actually for
+## Who this is for
 
 Reasonable, in descending order of how much I'd insist:
 
-**Almost everyone**, on the grounds that your mailbox is the most sensitive account you
-own — it's the recovery path for everything else — and having it read for advertising is
+**Almost everyone**, on the grounds that your mailbox is the most sensitive account you own (it's the recovery path for everything else), and having it read for advertising is
 a bad default. This is a low-effort, permanent improvement.
 
 **Anyone whose work involves other people's sensitive information.** Not because
@@ -118,28 +115,28 @@ DNS change instead of telling four hundred contacts a new address. Both services
 support custom domains on paid plans. Being locked into `@proton.me` recreates the
 problem you left Gmail to escape.
 
-Then separate addresses by function — financial, personal, shopping, public — on that
+Then separate addresses by function (financial, personal, shopping, public) on that
 domain. That does more for your actual security posture than the encryption does,
 because it limits what one compromise reaches.
 
 And keep the old mailbox alive for a year rather than closing it. Account recovery addresses
 surface for a surprisingly long time.
 
-## What I actually do
+## What I do
 
 I run both, and not out of indecision. They're split by who I'm talking to.
 
 **Proton for people I know.** Personal correspondence with real contacts, where the
-relationship is established and I want mail that behaves like mail — IMAP through the
-bridge, a normal client, PGP available if the other end has it. This is the mailbox that
-has to interoperate, so I use the one built to interoperate. Worth noting the bridge is a
-paid-plan feature and runs as a local application on your own machine, so IMAP works by
+relationship is established and I want mail that behaves like mail: IMAP through the
+bridge, a normal client, PGP available if the other end has it. Since this is the mailbox
+that has to interoperate, I use the one built to interoperate. The bridge is a paid-plan
+feature and runs as a local application on your own machine, so IMAP works by
 proxying through software you're running rather than by the provider exposing it.
 
 **Tuta for everyone else.** Signups, online services, people I've dealt with once,
 anything where a mailbox is a requirement rather than a conversation. This is the higher-risk
-correspondence — more likely to be breached, more likely to be sold, more likely to be a
-stranger — and it's where Tuta's larger encrypted footprint and closed ecosystem are
+correspondence (more likely to be breached, more likely to be sold, more likely to be a
+stranger) and it's where Tuta's larger encrypted footprint and closed ecosystem are
 advantages rather than costs. No IMAP is fine here. I don't want this mail in a general
 client anyway.
 

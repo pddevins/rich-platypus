@@ -63,7 +63,7 @@ optional parameters instead of passing four defaults to reach the fifth one.
 $client->charge(amount: 2500, currency: 'usd', capture: false);
 ```
 
-**The match expression.** `switch` with sane semantics — strict comparison, no
+**The match expression.** `switch` with sane semantics: strict comparison, no
 fall-through, and it returns a value.
 
 ```php
@@ -87,8 +87,7 @@ few years rather than for what you'll write yourself this month.
 
 ## The JIT, honestly
 
-Two engines shipped, Tracing JIT and Function JIT. The benchmark numbers are real —
-roughly 3x on synthetic tests, and 1.5x to 2x on some long-running applications.
+Two engines shipped, Tracing JIT and Function JIT. The benchmark numbers are real: roughly 3x on synthetic tests, and 1.5x to 2x on some long-running applications.
 
 The phrase to hold onto is "long-running." A typical Laravel request is dominated by
 database round-trips, and a JIT does nothing for I/O wait. If your app is slow because a
@@ -102,15 +101,15 @@ The good news is that most of the breaking changes were deprecated somewhere in
 the way there. The specific things that bite:
 
 - **String-to-number comparison changed.** `0 == "foo"` is now `false`. This is
-  correct and it will still break something, because somewhere in every mature
-  codebase is a loose comparison quietly relying on the old behavior.
+ correct and it will still break something, because somewhere in every mature
+ codebase is a loose comparison quietly relying on the old behavior.
 - **More errors are now `TypeError` / `ValueError`** instead of warnings. Internal
-  functions are consistent with userland ones. Code that limped along on warnings
-  now throws.
+ functions are consistent with userland ones. Code that limped along on warnings
+ now throws.
 - **`@` no longer silences fatal errors.** If it was hiding one, you're about to
-  meet it.
+ meet it.
 - **Removed extensions and functions.** Anything still calling into a long-since
-  deprecated API will need replacing rather than adjusting.
+ deprecated API will need replacing rather than adjusting.
 
 The order I'd do it in: get to 7.4, turn deprecation notices into failures in CI,
 fix everything, then bump. Upgrading straight from 7.2 to 8.0 works right up until
@@ -125,8 +124,7 @@ provided you're on the latest patch release of whichever you're running. That
 includes the 6.x LTS line, so getting to PHP 8 doesn't require a framework major
 first.
 
-Order of operations: latest patch of the framework, then the first-party packages —
-Passport, Cashier, Dusk, Horizon — since each ships its own PHP 8 support
+Order of operations: latest patch of the framework, then the first-party packages (Passport, Cashier, Dusk, Horizon), since each ships its own PHP 8 support
 separately.
 
 Then the actual blocker, which is everything else in `composer.json`. The framework
@@ -135,7 +133,7 @@ fresh major the second is what holds you up for months.
 `composer why-not php 8.0` names the package you're waiting on.
 
 Which is where I actually got stuck. On the project I moved, the language changes were
-the easy part — the 7.4 baseline was clean and the code needed very little. The
+the easy part. The 7.4 baseline was clean and the code needed very little. The
 dependency tree was the whole job.
 
 Some of the popular Spatie packages took a month or so to reach a stable PHP 8 release.

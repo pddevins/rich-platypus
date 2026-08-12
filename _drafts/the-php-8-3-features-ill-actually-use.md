@@ -9,8 +9,7 @@ tags: [php, laravel]
 published: false
 ---
 
-PHP 8.3 landed on 23 November. It's a small release compared to 8.0 or 8.1, and that's
-fine — the interesting thing about a mature language is when the additions stop being
+PHP 8.3 landed on 23 November. It's a small release compared to 8.0 or 8.1, and that's fine. The interesting thing about a mature language is when the additions stop being
 paradigm shifts and start being holes getting filled. Two of these close holes I've
 personally been working around.
 
@@ -29,7 +28,7 @@ interface Gateway
 ```
 
 The problem this solves is real but undramatic. A constant declared in an interface was
-previously a suggestion about shape — an implementer could redeclare `DRIVER` as an
+previously a suggestion about shape. An implementer could redeclare `DRIVER` as an
 array and nothing would object until something downstream broke. Now the intent is
 enforced where it's declared.
 
@@ -79,7 +78,7 @@ unusable in one specific spot.
 
 ## The rest
 
-`str_increment()` and `str_decrement()` for alphanumeric strings — useful for sequence
+`str_increment()` and `str_decrement()` for alphanumeric strings. Useful for sequence
 generation, though I'd think carefully before using it for anything that has to be
 predictable across locales. Continued improvements to the `Random` extension from 8.2.
 And the usual round of deprecations worth reading before they become removals.
@@ -94,5 +93,5 @@ delay you. `composer why-not php 8.3` before you plan anything.
 
 I've moved projects to 8.3 already and there is genuinely nothing to report, which is
 the answer you want from a minor release. No breakage, no surprises, no forked
-dependencies. Compared to the 8.0 transition — where I spent a month waiting on packages
-and forking an abandoned one — this is the version bump you do on a Tuesday afternoon.
+dependencies. Compared to the 8.0 transition, where I spent a month waiting on packages
+and forking an abandoned one, this is the version bump you do on a Tuesday afternoon.

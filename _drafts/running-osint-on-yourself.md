@@ -20,7 +20,7 @@ process.
 ## Why do this at all
 
 A threat model without an inventory is a mood. "I care about privacy" produces
-scattered decisions — a VPN here, a password manager there — with no way to tell
+scattered decisions (a VPN here, a password manager there) with no way to tell
 whether any of them addressed something that mattered.
 
 The specific question OSINT answers is: what can somebody assemble about me, starting
@@ -95,7 +95,7 @@ That's worth dwelling on because it's the opposite of a security control. It's l
 isn't a strategy, it can evaporate if the show's cultural footprint shifts, and it does
 nothing whatsoever against anybody who queries a broker directly instead of a search engine.
 Anyone with a distinctive name has none of it. But it does illustrate something real about
-how this actually works in practice: obscurity is a genuine component of exposure, and most
+how this works in practice: obscurity is a genuine component of exposure, and most
 of yours is not under your control.
 
 ## Reducing the surface
@@ -141,8 +141,8 @@ the broker data.** Twenty years of address and phone history is still sitting ou
 and I've read my own list and decided not to act on that part of it.
 
 That's a considered position rather than laziness. I know what's exposed, I know what it
-enables — locators and correlation material, tiers three and four, not authentication
-material — and I've accounted for it in how I've set up the parts that would actually hurt.
+enables (locators and correlation material, tiers three and four, not authentication
+material) and I've accounted for it in how I've set up the parts that would hurt.
 The addresses are historical. The authentication surface is where I spent the effort, and
 that's the part the search came back clean on.
 

@@ -30,8 +30,8 @@ almost anything else on the list.
 
 That's the part I'd want to tell someone in the middle of a hard stretch, if they
 asked. The distinction between solitude and loneliness isn't semantic and it isn't
-automatic. They feel identical for a while. Then at some point — and I can't tell
-you what triggers it — an evening alone stops registering as an absence and starts
+automatic. They feel identical for a while. Then at some point, and I can't tell
+you what triggers it, an evening alone stops registering as an absence and starts
 registering as an evening. Nothing changed except that I stopped waiting for it to
 be over.
 
@@ -53,7 +53,7 @@ weight is enormous even when the mass is the same.
 The reason I'm writing on the first of January rather than the thirty-first of
 December is that I'm more interested in the direction than the accounting. I've
 done enough looking back. The genuinely surprising thing about arriving at a fresh
-start you didn't request is how much of it is actually free — not the circumstances,
+start you didn't request is how much of it is actually free, not the circumstances,
 which are what they are, but the decisions. There's no accumulated inertia telling
 me how this year has to go. I get to pick.
 

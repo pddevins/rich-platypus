@@ -176,6 +176,15 @@ Do not remove `published: false`, and do not move the file to `_posts/`.
 ## Rules
 
 - Read `docs/WRITING-GUIDE.md` if you're writing any actual prose.
+- **If the piece is backdated, say so in the handoff.** The blog's writing style
+  is a deliberate gradient (§1b of the guide): plainer in the early years, more
+  compressed later. A post dated 2021 has to read like 2021, not like now. When
+  you scaffold with a date that isn't roughly today, tell `post-drafter` which
+  posts sit either side of it:
+
+  ```bash
+  grep -h '^date:' _posts/*.md _drafts/*.md | sort
+  ```
 - Don't write body prose inline in this skill. Delegate it via step 6, so the
   anti-fabrication rules in `post-drafter` actually apply to it.
 - Never create the file in `_posts/` — new work starts in `_drafts/`.

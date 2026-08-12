@@ -30,7 +30,8 @@ there. The reader is a competent peer who has not read the thing I read.
 - Hedging stacks: "it's arguably somewhat possible that."
 - The tricolon reflex: "faster, cleaner, and more maintainable." Pick one, or
   earn all three.
-- Em-dash-heavy asides everywhere. One per few paragraphs, tops.
+- Em-dash-heavy asides everywhere. See the per-era budget in §1b; the ceiling is
+  low and it is easy to blow past without noticing.
 - "Delve," "leverage," "robust," "seamless," "landscape," "in an era of,"
   "it's not just X, it's Y," "the harsh reality is."
 - Ending on a summary of what was just said. End on the consequence instead.
@@ -38,14 +39,92 @@ there. The reader is a competent peer who has not read the thing I read.
 **Length discipline:** if a paragraph can lose its first sentence and still
 work, it should.
 
+### Punctuation tells
+
+These are the marks that make prose read as machine-generated, in rough order of
+how much damage they do:
+
+- **The em dash.** The single strongest tell, because a model reaches for it
+  wherever a comma, colon, period, or parenthesis would do. Per-era budgets are in
+  §1b.
+  Before writing one, check whether the sentence wants a period instead.
+- **Paired em dashes around a list.** `— a, b, c —` is the worst case. Use
+  parentheses; the commas inside need the dash not to be there.
+- **Semicolons in narrative prose.** Fine in a list of clauses, suspicious as a
+  substitute for a full stop.
+- **Colon-as-drumroll**, more than once or twice in a piece.
+- **Uniform paragraph length.** Three-to-four-sentence paragraphs all the way
+  down is a rhythm no human sustains.
+
+### Phrases to ration, not ban
+
+Each of these is fine once in a piece and a tell by the third use. Grep before
+publishing.
+
+`actually` · `genuinely` · `precisely` / `exactly` · `worth noting` /
+`worth saying` · `the whole point` / `the entire point` · `which is the ...` ·
+`load-bearing` · `does the work` · `the honest version` / `the honest answer` ·
+`in practice` · `I want to be careful/clear/honest about` · `unglamorous`
+
+Two structural habits in the same category:
+
+- **`Not X. It's Y.`** as an emphasis device. Once per piece.
+- **The callback** — repeating your own keyword one or two sentences later to
+  close a loop. Reads tidy, and nobody speaks that way.
+
 ---
 
-## 2. The four kinds
+## 1b. The style gradient
 
-Every post declares a `kind`. It changes both how the piece is written and how
-it renders.
+The blog runs from 2020 to now, and the writing is supposed to get better across
+that span. Not *good then bad*, and not a different writer — the same voice
+gaining confidence. Earlier posts are plainer and explain themselves. Later ones
+compress, trust the reader, and use punctuation deliberately rather than
+avoiding it.
 
-### `post` — long-form (1500–3000 words)
+**When you add or edit a post, its style must sit between the post before it and
+the post after it in date order.** Not the newest post, and not your default
+register. Its neighbours.
+
+To find them:
+
+```bash
+grep -h '^date:' _posts/*.md _drafts/*.md | sort
+```
+
+Read the nearest post on each side before writing. The targets:
+
+| Era       | Avg sentence | Em dash / 1k words | Register |
+|-----------|--------------|--------------------|----------|
+| 2020–2021 | 13–18        | 0–1                | Plain and declarative. Short sentences. Defines its terms. Few fragments for emphasis. Sincere rather than dry. |
+| 2022–2023 | 15–20        | ≤2                 | More rhythm variation. Starts taking the counterargument seriously in its own section. |
+| 2024–2025 | 16–21        | ≤4                 | Confident compression. Concede-then-pivot structure. Dry humour. Leaves some inferences to the reader. |
+| 2026+     | 17–23        | ≤5                 | Assured. Opens mid-thought. Implication over statement. Em dashes used on purpose, sparingly. |
+
+Measure rather than guess:
+
+```bash
+ruby docs/style-gradient.rb          # per-post and per-year figures
+```
+
+Two rules that matter more than the numbers:
+
+1. **Never edit an old post up to the current register.** If a 2020 post reads
+   plainly, that is correct. Fix errors, not sophistication.
+2. **A backdated post must match its date, not today.** Writing a 2021 entry now
+   means writing it the way it would have been written then: shorter sentences,
+   no em dashes, less irony.
+
+The table is guidance for a piece as a whole. A single long sentence in a 2020
+post is fine; a 2020 post whose average is 21 is not.
+
+## 2. The five kinds
+
+Every post declares a `kind`. It changes both how the piece is written and how it
+renders. Word ranges are defined in `_data/taxonomy.yml`; the numbers below track
+it.
+
+### `post` — long-form (650–3000 words)
 
 Thesis in the opening. Subheads (`##`) that a reader can skim as an outline.
 Ends with a takeaway section that gives the reader something to *do* or
@@ -54,7 +133,7 @@ Ends with a takeaway section that gives the reader something to *do* or
 Shape: claim → why it's not obvious → evidence/walkthrough → objections →
 what I'd do.
 
-### `essay` — short-form argument (800–1500 words)
+### `essay` — short-form argument (600–1500 words)
 
 One argument, carried straight through. **No subheads.** No bullet lists. If it
 needs an outline it's a `post`. Renders with a drop cap, so the first sentence
@@ -71,6 +150,11 @@ goes in fenced blocks verbatim, not paraphrased.
 
 Required last section: **What I'd do differently.** A build log without it is
 just a changelog.
+
+### `brief` — short technical piece (400–900 words)
+
+One job: release notes, an upgrade path, a single comparison. Subheads allowed,
+unlike a note. No thesis required, because it is reference rather than argument.
 
 ### `note` — idea or TIL (100–500 words)
 
@@ -93,8 +177,8 @@ Every post in `_posts/` gets exactly this shape:
 
 ```yaml
 ---
-layout: post              # always "post", even for essays/logs/notes
-kind: essay               # post | essay | log | note
+layout: post              # always "post", whatever the kind
+kind: essay               # post | brief | essay | log | note
 title: "Privacy Matters"  # quoted; sentence case or title case, be consistent
 subtitle: "One line that earns the click without overselling."
 date: 2026-01-22 12:00:00 -0400

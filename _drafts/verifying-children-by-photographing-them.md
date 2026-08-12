@@ -12,7 +12,7 @@ published: false
 In October, Discord disclosed that around seventy thousand government ID photographs had
 been exposed through a third-party provider it named as 5CA. In February, it announced
 global age assurance. Eleven days after that announcement, security researchers found that
-Persona — the vendor actually running the verification — had left its entire government
+Persona, the vendor actually running the verification, had left its entire government
 dashboard codebase on a publicly reachable endpoint. Within days, Discord ended the
 relationship.
 
@@ -20,7 +20,7 @@ relationship.
 
 Neither of those failures was a cryptographic failure. That is the thing I want to dwell
 on, because the public argument about age verification is almost entirely about encryption
-and almost entirely misses where the risk actually lives.
+and almost entirely misses where the risk lives.
 
 The problem being solved is real, and I want to establish that before criticising the
 solution, because a lot of privacy commentary treats child safety online as a pretext
@@ -38,10 +38,10 @@ IDs are used to extract an age and then discarded, with only the age retained. I
 description holds end to end, the residual risk is genuinely modest.
 
 The trouble is the phrase "if that holds end to end," because the two things that have
-actually gone wrong were both about the ends.
+gone wrong were both about the ends.
 
 Consider what the October disclosure and the February discovery have in common. In October,
-ID photographs leaked from a company in the support chain — and 5CA has publicly denied
+ID photographs leaked from a company in the support chain, and 5CA has publicly denied
 that its systems were involved or that it ever handled government IDs for Discord, which
 means that months later the basic question of who was holding those images is contested by
 the two parties best placed to know. In February, the verification provider exposed its own
@@ -65,7 +65,7 @@ to ideal. The safety mechanism and the targeting mechanism are the same artefact
 from different directions, and the more reliable you make the verification, the more
 valuable the register becomes.
 
-To Discord's credit — and this deserves acknowledgement — it responded to the Persona
+To Discord's credit, and this deserves acknowledgement, it responded to the Persona
 disclosure by ending the relationship, and it has since delayed the global rollout to the
 second half of the year in order to expand verification options, increase vendor
 transparency, and publish technical documentation. That is roughly the correct set of
@@ -102,10 +102,10 @@ held it.
 
 That's what makes the current trajectory look less like wading in carefully and more like
 diving into water of unknown depth. When the failure mode is a well-indexed list of
-children, the argument for moving slowly is not obstruction — it's the caution we would
+children, the argument for moving slowly is not obstruction. It's the caution we would
 apply to any other system where the blast radius lands on people who did not consent and
 cannot opt out.
 
 TODO: this moves fast and I've written it from reporting through mid-2026. Before
-publishing, re-check: whether the delayed rollout has actually begun, whether 5CA's denial
+publishing, re-check: whether the delayed rollout has begun, whether 5CA's denial
 has been resolved either way, and whether any regulator has responded to either incident.

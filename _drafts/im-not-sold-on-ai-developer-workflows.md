@@ -11,7 +11,7 @@ published: false
 
 Every demonstration of AI-assisted development I have watched builds something new,
 small, and unconstrained. A todo app. A scraper. A landing page. That is not a
-coincidence and it is not a limitation of demo formats — it is the shape of problem
+coincidence and it is not a limitation of demo formats. It is the shape of problem
 these tools are genuinely good at, and it bears almost no resemblance to what I do on
 a Tuesday.
 
@@ -30,8 +30,8 @@ suspicious of that specific offer. We've had it before. Code generation, scaffol
 visual builders, the whole lineage. Each was real, each helped somewhere, and each was
 sold as a change in kind when it was a change in degree.
 
-The deeper worry is about review. Reading code is slower than writing it — this is
-not controversial, it's why code review is the bottleneck on every team I've worked
+The deeper worry is about review. Reading code is slower than writing it. This is
+not controversial. It's why code review is the bottleneck on every team I've worked
 on. A tool that produces plausible code shifts my work from the thing I'm fast at to
 the thing I'm slow at, and it does so while removing the context that makes review
 possible. When I write a function, I know which cases I considered and which I
@@ -39,11 +39,11 @@ dismissed. When I review a generated one, I know neither, so I have to reconstru
 reasoning from the artefact. That reconstruction is the expensive part, and it is
 precisely what gets skipped when a change looks fine.
 
-Which brings me to the failure mode I actually fear, which is not that these tools are
+Which brings me to the failure mode I fear, which is not that these tools are
 wrong. Wrong is fine. Compilers are wrong, libraries are wrong, I am wrong several
 times a day, and all of that is survivable because the wrongness is usually loud. What
 worries me is confident wrongness with correct syntax and plausible naming — code that
-passes review because it looks exactly like code that works. That is a genuinely new
+passes review because it looks exactly like code that works. That is a new
 category. A junior developer's mistakes announce themselves. This doesn't.
 
 I'm also unconvinced by the time-savings arithmetic, mostly because nobody doing the
@@ -58,22 +58,22 @@ There's a longer-term version of this that I find harder to dismiss than the pra
 objections. The ability to review generated code well is downstream of having written a
 lot of code badly and then fixed it. That's how the pattern recognition gets built.
 If the drafting step is delegated early enough, I don't know where the reviewing
-ability is supposed to come from — and it is the reviewing ability, not the drafting,
+ability is supposed to come from, and it is the reviewing ability, not the drafting,
 that the whole arrangement depends on. That's a bet on a skill remaining available
 while removing the process that produced it, which is at minimum worth saying out
 loud.
 
 Now the honest part, because I'd rather be accurate than consistent. I'm aware that
-"the bottleneck is understanding, not typing" is exactly what someone says immediately
+"the bottleneck is understanding, not typing" is what someone says immediately
 before a tool starts helping with understanding. And I've noticed my objections are
-mostly about a particular usage pattern — generate a feature, review the diff — rather
+mostly about a particular usage pattern (generate a feature, review the diff) rather
 than about the underlying capability. There are shapes I haven't seriously tried. Using
 one of these things to explain an unfamiliar codebase to me, rather than to write in
 it. Using it to enumerate cases I might have missed, where being wrong is cheap because
 I'm the one deciding what to do with the list. Those aren't the same offer, and I've
 been rejecting the whole category on the strength of the version I like least.
 
-So the position I'll actually commit to is narrower than the one I started with.
+So the position I'll commit to is narrower than the one I started with.
 Generating code that I then have to understand is a bad trade for the work I do,
 because it moves effort from my fast activity to my slow one and hides the reasoning I
 need. But that's a claim about one workflow, not about the tools. If something can

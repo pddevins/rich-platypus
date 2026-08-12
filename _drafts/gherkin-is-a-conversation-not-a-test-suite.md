@@ -24,8 +24,8 @@ Be honest about the bill first, because it's real.
 
 Every Gherkin scenario needs step definitions, and step definitions are a translation
 layer between English and code. That layer has to be maintained, it has no compiler
-watching it, and it drifts. You get near-duplicate steps — `Given I am logged in` and
-`Given I have signed in` — that do subtly different things. Refactoring the
+watching it, and it drifts. You get near-duplicate steps, `Given I am logged in` and
+`Given I have signed in`, that do subtly different things. Refactoring the
 application means hunting through `.feature` files that nothing type-checks. And the
 suite is slow, because scenarios written in business language tend to be end-to-end by
 default.
@@ -56,18 +56,18 @@ domain, it's ceremony.
 
 ## The comparison, concretely
 
-**PHPUnit** — the default, and still correct for most things. Verbose, explicit,
+**PHPUnit**. the default, and still correct for most things. Verbose, explicit,
 mature. Its ceremony is a genuine cost on the hundredth test and a genuine benefit
 when a new engineer reads it cold. Best for unit and integration work where the
 audience is exclusively developers.
 
-**Pest** — the same engine with the ceremony removed. Higher-level `it()` blocks,
+**Pest**. the same engine with the ceremony removed. Higher-level `it()` blocks,
 expressive expectations, datasets that make parameterised cases readable instead of
 arduous. What it changes is not capability but the marginal cost of writing one more
-test, and that marginal cost is what actually determines how many tests exist. Best as
+test, and that marginal cost is what determines how many tests exist. Best as
 the default for new PHP work.
 
-**Behat / Gherkin** — a specification tool that happens to execute. Best used for a
+**Behat / Gherkin**. a specification tool that happens to execute. Best used for a
 small number of scenarios describing business rules that non-developers need to read
 and confirm. Worst used as your integration suite.
 
@@ -75,9 +75,9 @@ The failure mode is treating these as competitors and picking one. They answer d
 questions: does this unit behave, does this system hold together, and do we agree on what
 we're building.
 
-## What we actually settled on
+## What we settled on
 
-Pest and PHPUnit side by side for the application suite — that's where developers live,
+Pest and PHPUnit side by side for the application suite. That's where developers live,
 and the mix is pragmatic rather than principled.
 
 Then Selenium driving the browser for QA automation, with Gherkin sitting between the
@@ -92,7 +92,7 @@ agreed to, which is a very short argument.
 
 Compare that with the usual arrangement, where developers have their tests, QA has their
 automation, the two overlap in undefined ways, and nobody can say which suite owns a
-given behaviour. That's the problem Gherkin solved for us — not coverage, not regression
+given behaviour. That's the problem Gherkin solved for us, not coverage, not regression
 safety, but jurisdiction.
 
 ## What seemed to help most

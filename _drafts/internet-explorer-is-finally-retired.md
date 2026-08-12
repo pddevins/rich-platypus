@@ -10,7 +10,7 @@ published: false
 ---
 
 Microsoft retired the Internet Explorer 11 desktop application on 15 June 2022. No
-more security updates, no more bug fixes, and — the part I care about — no more
+more security updates, no more bug fixes, and, the part I care about, no more
 defensible reason for it to appear in a project's browser support matrix.
 
 <!--more-->
@@ -22,7 +22,7 @@ decision came with a question attached. Grid was effectively off the table, or o
 it only behind a flexbox fallback and a vendor-prefixed implementation of an
 obsolete draft spec. Custom properties were unavailable, which meant a theme was a
 build step rather than a `:root` block. `fetch`, `Promise`, `Array.from`,
-`Object.assign` — all polyfill. Every one of those is a small cost, and there were
+`Object.assign`. All polyfill. Every one of those is a small cost, and there were
 dozens.
 
 The honest caveat is that the engine hasn't actually left the building. IE mode in

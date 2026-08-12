@@ -26,13 +26,13 @@ claim has to be traceable to something approved.
 That last constraint is the one that reorganises everything. In an ordinary content
 system, a user makes something and publishes it. Here, a user assembles something
 from approved components, and the system's real job is to make the compliant path
-the easy path — because if it's not, people will do the work in Word and email it
+the easy path, because if it's not, people will do the work in Word and email it
 around, and you've made a very expensive way of not solving the problem.
 
 Designing a full system under that constraint was the best technical work I've had in
 years, and not because it was novel. It's that the requirements were sharp. When "this
 claim must be approved for this market" is a hard rule rather than a preference, most
-architectural arguments resolve themselves — you stop debating taste and start deriving
+architectural arguments resolve themselves. You stop debating taste and start deriving
 structure from something nobody can wave away.
 
 I'm going to leave the architecture there deliberately. The specifics of how compliance
@@ -83,8 +83,8 @@ progressing or stalled.
 
 What fixed it was structural. I was made overall technical lead, and the team split into
 groups of three to five developers, each focused on one cluster of interconnected
-domains, each with its own board. Small enough to keep running on shared context — which
-is the thing that actually works at that size — and bounded enough that two groups
+domains, each with its own board. Small enough to keep running on shared context, which
+is the thing that works at that size, and bounded enough that two groups
 rarely reached for the same code.
 
 That made my job the seams rather than the features: flagging where two groups' domains
@@ -106,7 +106,7 @@ Two things drove that number, and neither one is "we wrote buggy code."
 
 The first is combinatorial. Every asset, multiplied by every jurisdiction, multiplied
 by every locale, is a test surface that grows faster than the feature set does. Adding
-a market doesn't add one market's worth of testing — it adds a column to every row
+a market doesn't add one market's worth of testing. It adds a column to every row
 that already existed. Automation absorbs a great deal of that, and then hits the part
 where a person has to judge whether a rendered claim reads correctly in a specific
 language inside a specific regulatory context. That judgement doesn't automate.
@@ -140,5 +140,5 @@ scheduled because they no longer happen by accident.
 The through-line, and the reason both halves of this year belong in one post: at three
 people, the system and the team can both survive on things nobody wrote down. At thirty,
 everything that isn't explicit is a coin flip. The work of the year was making things
-explicit — approvals in the platform, decisions in the team — and those are the same job
+explicit (approvals in the platform, decisions in the team) and those are the same job
 wearing different clothes.

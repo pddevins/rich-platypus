@@ -2,7 +2,7 @@
 layout: post
 kind: log
 title: "Digitising the shelves"
-subtitle: "A Samba share, an external DVD drive, and a turntable routed through a receiver into a laptop — getting the physical media collection onto the homelab."
+subtitle: "A Samba share, an external DVD drive, and a turntable routed through a receiver into a laptop. Getting the physical media collection onto the homelab."
 date: 2025-09-20 13:00:00 -0400
 categories: [homelab]
 tags: [self-hosting, media-server, proxmox, tinkering]
@@ -54,7 +54,7 @@ and Picard is the tool to reach for when a rip comes back unidentified or wrong.
 
 The part worth knowing is that a disc ID lookup can return several matches, because
 the same album gets pressed in different regions with different track gaps. Choosing
-wrong gives you a correct rip with subtly wrong metadata — wrong year, wrong label,
+wrong gives you a correct rip with subtly wrong metadata: wrong year, wrong label,
 occasionally wrong track titles on a bonus track. That's more annoying than a failed
 rip, because it looks like success.
 
@@ -75,7 +75,7 @@ Splitting it also means the slow, error-prone step happens while the disc is sti
 drive, and the CPU-bound step happens whenever.
 
 I keep the subtitles, and this is where the honest trial and error lives. Selecting the
-right subtitle track is not obvious — a disc will carry several, variously labelled, some
+right subtitle track is not obvious. A disc will carry several, variously labelled, some
 forced, some commentary, some for a different cut of the film entirely. Then having picked
 one, the display timing needs checking against the video, because a mismatched track will
 be plausibly close and steadily wrong. Neither problem has a shortcut. You pick, you spot
@@ -95,7 +95,7 @@ equalisation, then line out from the receiver into a Linux laptop's input, then
 Audacity recording the whole side as one file.
 
 Two things about that chain matter. The receiver is doing the phono stage, which is
-not optional — a turntable's output is far too quiet and equalised to a curve that has
+not optional. A turntable's output is far too quiet and equalised to a curve that has
 to be reversed. And the recording is a whole side in one pass, because that's how
 records work; there is no track boundary in the signal, only quieter bits.
 
@@ -115,7 +115,7 @@ environment with everything else in the machine, and you can hear it on quiet pa
 separate interface is the single change that most affects the result.
 
 I record at a high sample rate and bit depth and archive to FLAC. The reasoning is that
-this is a one-time capture of a physical object — the record will not sound better later,
+this is a one-time capture of a physical object. The record will not sound better later,
 and the drive space is cheap relative to doing the whole thing again.
 
 I do use click removal. There's a purist argument for leaving surface noise alone as part
@@ -144,7 +144,7 @@ them first meant the boring bulk of the CD collection sat undone while I fiddled
 placement on one live album.
 
 About 80% of the collection is digitised at this point, which I'm treating as done rather
-than as 20% remaining. The last fifth is the awkward fifth — the discs that wouldn't
+than as 20% remaining. The last fifth is the awkward fifth: the discs that wouldn't
 identify, the records with segues I'd have to split by hand, the box set with no metadata
 anywhere. Each one is a small individual decision rather than a batch, and batches are what
 made the first 80% possible.

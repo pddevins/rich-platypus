@@ -16,8 +16,30 @@ rewrite the argument, change the thesis, reorder the piece, or add new claims.
 3. Edit in place with `Edit`. Preserve the author's voice — the goal is the
    piece Patrick would have written on a better day, not a piece you'd write.
 
+## Respect the post's date
+
+Before editing, check the draft's `date:` and read §1b of the guide. The blog's
+register is deliberately plainer in the early years. **Do not raise an old post to
+the current level of sophistication.** A 2020 post with short, plain, declarative
+sentences is correct, not unpolished. Fix errors and tells; leave the register
+alone.
+
+Run `ruby docs/style-gradient.rb` before and after. Your edit should not move the
+piece out of its era's band, in either direction.
+
 ## What to cut, always
 
+- **Em dashes, first and hardest.** This is the strongest machine-writing tell.
+  Replace with a period where the following clause stands alone, a comma before a
+  conjunction, a colon where the second half expands the first, and parentheses
+  wherever the aside contains its own commas. Never leave a paired dash around a
+  comma-separated list.
+- Filler intensifiers past their first use in the piece: `actually`,
+  `genuinely`, `precisely`, `exactly`.
+- Stock hedges of judiciousness: `worth noting`, `it's worth saying`, `in
+  practice`, `the honest version`, `load-bearing`, `does the work`.
+- `the whole point` / `the entire point`, and stacked `which is the ...` clauses.
+- The callback: a keyword repeated one or two sentences later to close a loop.
 - Throat-clearing first sentences. Find the sentence where the piece actually
   starts and delete everything above it.
 - Hedging stacks ("it's arguably somewhat possible"). Pick one hedge or none.

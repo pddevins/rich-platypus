@@ -25,7 +25,7 @@ can snapshot before an upgrade, roll back in seconds, and destroy without wonder
 else on the machine depended on it.
 
 That property matters more than performance for a homelab, because the actual failure
-mode of a homelab isn't hardware — it's me changing something on a Sunday and not being
+mode of a homelab isn't hardware. It's me changing something on a Sunday and not being
 able to get back.
 
 Proxmox also gives you LXC containers alongside full VMs, which is the right split for
@@ -37,7 +37,7 @@ kernel or that I don't trust.
 Storage before anything else, because converting later means moving data you've started
 depending on.
 
-Three 2TB spinning disks in RAID5 — RAIDZ1, in ZFS terms — which gives roughly 4TB usable
+Three 2TB spinning disks in RAID5 (RAIDZ1, in ZFS terms) which gives roughly 4TB usable
 and survives one disk failing.
 
 ```bash
@@ -61,7 +61,7 @@ Then snapshots, which are most of the reason for choosing ZFS at all:
 zfs set com.sun:auto-snapshot=true tank
 ```
 
-And separately — because this is the part people conflate — a dedicated 1TB SSD holding
+And separately, because this is the part people conflate, a dedicated 1TB SSD holding
 backups of everything on the array, rolling, diffs only. Snapshots and that SSD are doing
 different jobs. A snapshot protects me from myself. The backup disk protects me from the
 array.
@@ -95,7 +95,7 @@ everybody exactly once and it's worth understanding rather than just fixing.
 An unprivileged LXC container shifts its user IDs relative to the host. The container's
 `www-data` is user 33 inside the container and something like 100033 on the host. So a
 directory on the host owned by the host's `www-data` is, from inside the container, owned
-by a completely unrelated user — and Nextcloud can't write to its own data directory.
+by a completely unrelated user, and Nextcloud can't write to its own data directory.
 
 The symptom is unhelpful. Not a permission error you can read, but Nextcloud's installer
 failing to complete, or completing and then being unable to store a file, which looks like

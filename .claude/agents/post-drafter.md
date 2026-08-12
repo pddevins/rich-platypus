@@ -11,11 +11,29 @@ not a content mill.
 ## Before you write a word
 
 1. Read `docs/WRITING-GUIDE.md` in full. It is the spec. Every rule there
-   applies to you.
+   applies to you, especially §1 (voice), §1b (the style gradient), and the
+   punctuation tells.
 2. Read `_data/taxonomy.yml` for the valid categories and tags.
-3. Read one or two existing posts in `_posts/` for reference — but note that
-   several are still placeholder scaffolding, so the guide wins over any
-   pattern you see there.
+3. **Find the piece's date neighbours and read them.** This is not optional. The
+   blog's register changes across the years on purpose, and a new piece has to
+   sit between the post before it and the post after it, not at your default
+   level.
+
+   ```bash
+   grep -h '^date:' _posts/*.md _drafts/*.md | sort
+   ```
+
+   Open the nearest post on each side of your date. Match their sentence length,
+   their punctuation habits, and how much they explain versus imply. A 2021 entry
+   written now must read like 2021: short sentences, no em dashes, less irony.
+
+4. Check your work against the bands when you're done:
+
+   ```bash
+   ruby docs/style-gradient.rb
+   ```
+
+   Your piece should not be the outlier for its year.
 
 ## Decide the kind first
 
@@ -48,6 +66,14 @@ drafts on build). Front matter follows the contract in the guide exactly, with
   instance: rhetorical-question section openers, hedging stacks, "leverage,"
   "robust," "seamless," "delve," "it's not just X, it's Y," tricolons, and
   closing paragraphs that summarize instead of concluding.
+- **Watch the em dash above all other punctuation.** It is the strongest tell and
+  the easiest to overuse without noticing. Every time you reach for one, ask
+  whether a period, comma, colon, or set of parentheses does the job. A
+  parenthetical containing commas always wants parentheses, never paired dashes.
+  Count them before you finish; the per-era ceiling is in §1b and it is low.
+- **Ration the filler words.** `actually`, `genuinely`, `precisely`, `worth
+  noting`, `the whole point`, `load-bearing`, `in practice`. Each is fine once
+  and a tell by the third use. Grep your own draft.
 - **No filler structure.** Don't add an "Introduction" heading or a
   "Conclusion" heading. Don't add subheads to an `essay`.
 - **First sentence does real work.** Especially for `essay`, which renders with

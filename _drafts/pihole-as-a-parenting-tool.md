@@ -59,7 +59,7 @@ honest cost. A second instance with `keepalived` is the proper answer.
 
 I run one. So when that container goes down, the internet is down for everybody, and the
 first time it happened during somebody's call I heard about it in detail. There's no clever
-mitigation to report — it's a known, accepted fragility, and the fix is on a list.
+mitigation to report. It's a known, accepted fragility, and the fix is on a list.
 
 If you're setting this up for a household rather than for yourself, I'd genuinely consider
 running two from the start. The second instance costs almost nothing on hardware you already
@@ -116,7 +116,7 @@ iptables -t nat -A PREROUTING -i br-lan -p tcp --dport 53 \
 ```
 
 This is the step that turns filtering from something that works on cooperative devices into
-something that works on the network. Without it, the whole exercise is opt-in — and the
+something that works on the network. Without it, the whole exercise is opt-in, and the
 devices least likely to cooperate are exactly the cheap ones you have the least control
 over otherwise.
 

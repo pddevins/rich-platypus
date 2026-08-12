@@ -92,6 +92,10 @@ compact card with no excerpt.
   `idea-wrangler` agent.
 - Drafting from a rough idea → `post-drafter` agent.
 - Tightening a draft's prose → `line-editor` agent.
+- Checking the style gradient → `ruby docs/style-gradient.rb`. The blog's register
+  is deliberately plainer in the early years and more compressed later; a new or
+  backdated post must sit between its date neighbours, not at today's level. See
+  §1b of the writing guide. Never edit an old post up to the current register.
 - Checking front matter and build safety before publishing → `frontmatter-check`
   agent.
 

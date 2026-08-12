@@ -33,7 +33,7 @@ class Order
 ```
 
 The significance isn't the saved keystrokes. It's that the getter-and-setter pattern
-existed largely because a property couldn't ever become computed later — so you wrapped
+existed largely because a property couldn't ever become computed later, so you wrapped
 it in a method up front, purely to preserve the option. Property hooks remove that
 pressure. A plain public property can gain a `get` hook without any caller changing,
 which means the defensive accessor is no longer defensive, it's just noise.
@@ -60,7 +60,7 @@ class Invoice
 ```
 
 Readable everywhere, writable only inside the class. Previously this required a private
-property plus a public getter — three lines and a method call to express one idea. This
+property plus a public getter: three lines and a method call to express one idea. This
 is the feature I expect to reach for most, because "anyone may look, only I may change"
 describes a large share of domain objects.
 
@@ -74,8 +74,7 @@ $all   = array_all($orders, fn ($o) => $o->isPaid());
 ```
 
 Every codebase had these as helpers, or reached for Laravel's collections to get them.
-Now they're native. Laravel users will mostly keep using collections, and that's fine —
-the win is for library code that shouldn't depend on a framework.
+Now they're native. Laravel users will mostly keep using collections, and that's fine. The win is for library code that shouldn't depend on a framework.
 
 ## Instantiation without the extra parentheses
 
@@ -98,7 +97,7 @@ For Laravel specifically: both 11 and 12 support PHP 8.4 while still requiring o
 8.2 as a minimum, so there's no framework upgrade gated behind this one. You can move the
 language without touching the framework.
 
-One additional note for 8.4 — property hooks and asymmetric visibility are new syntax, so
+One additional note for 8.4. Property hooks and asymmetric visibility are new syntax, so
 anything parsing PHP source (static analysis, IDE tooling) needs to understand them before
 you can use them without noise. Check PHPStan and Psalm versions before writing hooks
 throughout a codebase.
@@ -107,7 +106,7 @@ throughout a codebase.
 
 I haven't rewritten anything to use property hooks, and I don't intend to. What I've done
 instead is reach for them per-property, where a specific property had a specific reason to
-need behaviour — which is, I think, the correct dose.
+need behaviour, which I think is the correct dose.
 
 That's worth saying because the framing around a feature like this pushes toward
 adoption as a style. Hooks are not a better way to write properties. They're a way to

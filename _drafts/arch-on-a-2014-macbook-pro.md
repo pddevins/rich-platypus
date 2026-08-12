@@ -11,7 +11,7 @@ published: false
 
 A few years ago I ran a distro bake-off for professional work and Arch lost, on the
 grounds that it wanted more attention than I had to give it. I've now been running Arch
-on a 2014 MacBook Pro for months, it's the machine I reach for first, and the reason
+on a 2014 MacBook Pro for months. It's the machine I reach for first, and the reason
 the verdict flipped has nothing to do with Arch changing.
 
 <!--more-->
@@ -34,7 +34,7 @@ unexpected two-hour repair on a Tuesday is unacceptable, and where I wanted to
 replicate the environment across machines. Debian won and still holds that job.
 
 This is a different job. This machine is one I'm allowed to break. And once "don't
-lose a working day" is off the requirements list, the calculus inverts — the thing that
+lose a working day" is off the requirements list, the calculus inverts. The thing that
 made Arch expensive before is what makes it good here.
 
 The specific value is that nothing is installed that I didn't install. On a
@@ -44,7 +44,7 @@ disagree with. Arch has no opinion. The install is longer and every subsequent q
 is shorter.
 
 I landed on Niri, a scrollable-tiling Wayland compositor, which suits a 13-inch screen
-better than a conventional tiling model does — windows live on an infinite horizontal
+better than a conventional tiling model does. Windows live on an infinite horizontal
 strip you scroll along, so a small display stops being a constraint you're fighting.
 
 Start to finish, including styling and keybind customisation, the whole thing took about
@@ -53,15 +53,14 @@ than the folklore suggests, on hardware this well documented.
 
 ## What needed doing on this hardware
 
-Less than I expected. The trackpad and fan control both worked out of the box — no
-`mbpfan`, no thermal tuning, nothing. On a 2014 chassis that surprised me, and it's the
+Less than I expected. The trackpad and fan control both worked out of the box. No `mbpfan`, no thermal tuning, nothing. On a 2014 chassis that surprised me, and it's the
 main reason the install stayed a three-hour job.
 
 Two things did need attention.
 
 **Wifi.** The Broadcom chip is the classic Mac-on-Linux obstacle. What fixed it was a
 newer and considerably smaller driver package than the big proprietary one I'd reached for
-on this hardware in the past — once that was in place it simply worked, with none of the
+on this hardware in the past. Once that was in place it simply worked, with none of the
 kernel-module wrestling this problem is famous for.
 
 **The function keys.** The mapping was wrong out of the box, which on a Mac keyboard means
@@ -72,7 +71,7 @@ your own keycodes first, because Mac keyboard layouts vary by model and year and
 copy-pasted config will be subtly wrong in a way that's maddening to debug.
 
 And macOS is gone. I wiped it rather than shrinking a partition for a dual boot, which in
-hindsight was obviously correct — see below.
+hindsight was obviously correct. See below.
 
 TODO: if the Broadcom driver package name comes back to you, name it. `brcmfmac` (the
 in-kernel driver, as against the much larger `broadcom-wl`) would fit your description of
@@ -99,7 +98,7 @@ about why, because "no regrets" usually means someone hasn't looked hard enough.
 
 The reason this went smoothly is that the hardware is a decade old. Every quirk of this
 model has been hit, documented, and solved by somebody else years ago, and the two
-problems I did have — wifi and the keyboard — both had known answers I could look up.
+problems I did have, wifi and the keyboard, both had known answers I could look up.
 There was no novel debugging. Wiping macOS instead of keeping a dual boot removed the one
 decision I might otherwise have got wrong.
 
