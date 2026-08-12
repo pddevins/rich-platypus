@@ -10,9 +10,9 @@ redirect_from:
   - /2026/05/verifying-children-by-photographing-them/
 ---
 
-In October, Discord disclosed that around seventy thousand government ID photographs had
-been exposed through a third-party provider it named as 5CA. In February, four months
-later, it announced that age assurance was going global. Eleven days after that
+Last October, Discord disclosed that around seventy thousand government ID photographs
+had been exposed through a third-party provider it identified as 5CA. This February, four
+months later, it announced that age assurance was going global. Eleven days after that
 announcement, security researchers found that Persona, the vendor actually running the
 verification, had left its entire government dashboard codebase on a publicly reachable
 endpoint. Discord ended the relationship days later.
@@ -32,15 +32,14 @@ There is a strand of privacy writing that treats child safety as a cover story, 
 for acquiring monitoring powers that would be refused outright if they were argued on
 their own merits. That reading is often correct about a specific law or a specific
 product, and I am about to make a version of it myself. It is wrong as a claim about the
-underlying danger. Children are harmed on these platforms, the risk is not manufactured to
-justify anything, and it does not become less real because the remedies on offer are bad
-ones.
+underlying danger. Children are harmed on these platforms. The risk is not manufactured in order to justify
+anything, and it does not become less real because the remedies on offer are bad ones.
 
-None of which obliges me to accept that what Discord built is a serious attempt to
-address it.
+None of which obliges me to accept that what Discord built is a serious attempt to solve
+the problem.
 
-Their claims are worth stating fairly. This is not universal facial recognition. Over
-ninety per cent of users are expected to have an age inferred from existing signals with
+Discord's claims are worth stating fairly. This is not universal facial recognition. Over
+ninety percent of users are expected to have an age inferred from existing signals with
 no action required, and the verification path applies to a minority seeking access to
 age-restricted spaces. Facial scans are processed on device, and Discord says neither it
 nor its vendors ever receive them. IDs are used to extract an age and then discarded,
@@ -48,20 +47,20 @@ with only the age retained. Taken at face value, that is a thoughtful design.
 
 The trouble is that a design is a description of the intended path, and both failures so
 far happened somewhere else. In October, ID photographs escaped through a company in the
-support chain, handling age-related appeals. In February, the verification provider
+support chain that handled age-related appeals. In February, the verification provider
 exposed its own government-facing dashboard code to the open internet. Neither event
-required anyone to break an algorithm. Both were the ordinary operational failure of a
-subcontractor, which is the most common way sensitive data escapes and the least
+required anyone to break an algorithm. Both were ordinary operational failures at a
+subcontractor. That is the most common way sensitive data escapes, and the least
 discussed.
 
 So the vendor chain was not an unforeseeable risk. It was the risk that had already
-materialized, at Discord, with this same category of data, four months before they
-announced they were expanding the pipeline. Whatever internal review followed October, it
-did not produce enough caution to change the February decision. You cannot describe that
-as carefully wading in. They had been shown exactly where the floor gives way and stepped
-there again on purpose.
+materialized, at Discord, with the same category of data, four months before it announced
+it was expanding the pipeline. Whatever internal review followed October, it did not
+produce enough caution to change the February decision. You cannot describe that as
+caution. Discord had been shown exactly where the floor gives way, and chose to stand
+there again.
 
-It gets worse on the detail. At the moment Discord announced this expansion, the vendor it
+The details make it worse. At the moment Discord announced this expansion, the vendor it
 had chosen was already leaving government-facing code on a public endpoint. Discord did
 not find that. Researchers did, and the relationship ended only once the finding was
 public. Separately, 5CA has publicly denied that its systems were involved or that it ever
@@ -76,9 +75,10 @@ reported notices indicating the verification vendor could process and temporaril
 submitted data for up to seven days, which is difficult to reconcile with the on-device
 framing. I don't think that is necessarily dishonesty. Large systems have multiple paths
 and the ID route is plainly not on device. But it means the guarantee a user
-receives depends on which path they were silently routed down, communicated through
-interface copy, in a flow designed to be completed quickly. The guarantee may be sound.
-The user's ability to know which guarantee applies to them is not.
+receives depends on which path they were silently routed down, and the only account of
+that path they are given is interface copy inside a flow designed to be completed
+quickly. The guarantee may well be sound. The user's ability to know which guarantee
+applies to them is not.
 
 There is a structural point underneath all of this that no amount of vendor diligence
 fixes. A system that determines who is under eighteen has necessarily processed the
@@ -89,7 +89,7 @@ close to ideal. The safety mechanism and the targeting mechanism are the same ar
 viewed from different directions, and the more reliable the verification, the more
 valuable the register becomes.
 
-Which brings me to the part I can't prove and am not going to pretend I can. I have no
+Which brings me to the part I cannot prove, and am not going to pretend I can. I have no
 window into anyone's motives at Discord. What I can describe is what the arrangement
 produces regardless of motive: every user defaulted into a state where full access
 requires proving who they are, an age signal retained on the platform's side, a
@@ -108,7 +108,7 @@ To be fair about what has happened since: the Persona relationship is over, and 
 global rollout is delayed to the second half of the year to expand verification options,
 increase vendor transparency, and publish technical documentation. Those are broadly the
 right moves. They are also entirely reactive. Every one of them followed public
-criticism rather than internal review, and the whole set was purchased with two incidents
+criticism rather than internal review, and the whole set was paid for with two incidents
 involving real people's identity documents. That is an expensive route to "we should be
 clearer about our vendors."
 
@@ -128,8 +128,8 @@ the point is that they are not, and this is what ordinary operational security l
 at the third and fourth tier of a compliance pipeline. But accountability requires names.
 A system where the platform apologizes, the vendor is quietly replaced, and nobody is
 answerable for seventy thousand identity documents will produce this outcome again with a
-different vendor, and the children whose data it was will never learn which company held
-it.
+different vendor, and the children those documents belonged to will never learn which
+company held them.
 
 The failure mode here is a well-indexed list of children. Anyone building toward that
 should be able to show they understood the risk before the second incident rather than
