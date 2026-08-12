@@ -26,7 +26,15 @@ pretending otherwise. Platforms built for adults are used by children. Adults wh
 access to children go where children are. "We ask users to state their age" has never
 been a control, and regulators in several jurisdictions have decided that is no longer
 acceptable. They are not obviously wrong, and there is no clean answer available to
-anyone. The people treating child safety online as a pretext are wrong about that.
+anyone.
+
+There is a strand of privacy writing that treats child safety as a cover story, a lever
+for acquiring monitoring powers that would be refused outright if they were argued on
+their own merits. That reading is often correct about a specific law or a specific
+product, and I am about to make a version of it myself. It is wrong as a claim about the
+underlying danger. Children are harmed on these platforms, the risk is not manufactured to
+justify anything, and it does not become less real because the remedies on offer are bad
+ones.
 
 None of which obliges me to accept that what Discord built is a serious attempt to
 address it.
