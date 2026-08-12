@@ -110,7 +110,10 @@ increase vendor transparency, and publish technical documentation. Those are bro
 right moves. They are also entirely reactive. Every one of them followed public
 criticism rather than internal review, and the whole set was paid for with two incidents
 involving real people's identity documents. That is an expensive route to "we should be
-clearer about our vendors."
+clearer about our vendors." And the bill does not land on Discord. It lands on the next
+user asked to photograph an identity document, who now has to price in the possibility
+that the request is being serviced three tiers down by a company nobody has named, and
+who has been given no way to work out whether this is the careful kind of ask.
 
 What I would hold to is procedural, and it follows from where these failures
 occurred. Any system collecting non-revocable identifiers from minors should have to
