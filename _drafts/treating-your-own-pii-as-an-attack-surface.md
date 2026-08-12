@@ -98,7 +98,7 @@ colleague's tagged photograph, a school newsletter with your child's name and ye
 group, a former employer's staff page still online.
 
 There's no technical remedy, and what works instead is asking, specifically and without
-making it weird, since most people will honour "please don't tag my kids" and simply
+making it weird, since most people will honor "please don't tag my kids" and simply
 hadn't considered it. What doesn't work is treating this as a solved problem because
 your own settings are tidy.
 

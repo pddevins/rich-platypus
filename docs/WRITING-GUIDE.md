@@ -69,7 +69,7 @@ This catches models out constantly, because the British forms are common in
 training data. Grep before publishing:
 
 ```bash
-grep -rniE '\b(behaviour|colour|favour|honour|fortnight|whilst|amongst|learnt|licence|programme|defence|centre|judgement|towards|grey)\b|\b(recognis|optimis|organis|emphasis|realis|apologis|sanitis|standardis|categoris|prioritis|summaris|specialis|utilis|practis)(e|es|ed|ing|ation|ations)\b' _drafts/ docs/
+grep -rniE '\b(behaviour|colour|favour|honour|fortnight|whilst|amongst|learnt|licence|programme|defence|centre|judgement|towards|grey)\b|\b(recognis|optimis|organis|emphasis|realis|apologis|sanitis|standardis|categoris|prioritis|summaris|specialis|utilis|practis)(e|es|ed|ing|ation|ations)\b' _drafts/ _posts/
 ```
 
 Note the second half matches only the verb endings. A bare `optimis` or `realis`
