@@ -16,22 +16,21 @@ it the rare piece of technology that gets less mysterious the closer you look.
 
 <!--more-->
 
-This comes out of two years of volunteering with local schools, back when the Raspberry
-Pi was new and nobody had settled yet on what it was for in a classroom. I am writing it
-down now because the structure held up, and because the board has only got easier to teach
-with since.
+This comes out of two years of volunteering with local schools, 2012 to 2014, back when
+the Raspberry Pi was new and nobody had settled yet on what it was for in a classroom. I
+am writing it down now because the structure held up.
 
 The groups were split by grade. That is a luxury. It meant each activity could be pitched
 at one age instead of at a spread.
 
+Everything below was done on an original Model B, which is worth naming for one reason: it
+had a 26-pin GPIO header. The 40-pin layout that every current tutorial assumes arrived
+with the B+ in 2014. So the pin numbers in anything written since then will not map onto
+what I was handing to eight-year-olds, and if you are following along on a modern board you
+should read your own pinout rather than mine.
+
 The hardware stays the same across all six grades. What changes is the question being
 asked of it.
-
-TODO: which board, and does the timeline hold? You said 2011 to 2013, but the first
-Raspberry Pi shipped in February 2012 and the 3B not until February 2016, so a 3B is not
-possible in that window. Either the board was an early Model B and the 3B reference was
-mine to begin with, or the sessions ran later than you remember. The model is worth naming
-in the post, since pinouts differ, so I have left it out rather than guess.
 
 ## Kindergarten through first grade: inputs and outputs
 
@@ -93,6 +92,13 @@ is, using the DHT. And the one that goes over best: an HC-SR04 ultrasonic sensor
 measuring distance, which is where fourth grade earns its place, because the sensor
 reports a round-trip time and you have to divide by two to get a distance. That is a
 genuine unit-conversion problem arriving disguised as a robot.
+
+One thing to get right before you hand that one to a child. The HC-SR04 runs on 5V and its
+echo pin sends 5V back, and a Pi's GPIO pins only tolerate 3.3V. Wired straight in it can
+damage the pin. Two resistors as a voltage divider on the echo line fixes it, and it is
+worth building that into the setup you give them rather than trusting twenty
+nine-year-olds to wire it correctly. This is the one sensor on the list where a mistake
+costs hardware instead of a lesson.
 
 Each project is a loop, a conditional, and a sensor, so each one is review. It doesn't
 feel like review, because the output is a thing that sits on a shelf and works.
