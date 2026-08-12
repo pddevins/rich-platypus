@@ -26,10 +26,10 @@ mysqlsh -- util check-for-server-upgrade \
   root@localhost:3306 --target-version=8.0.34
 ```
 
-MySQL Shell's checker finds reserved-word collisions, prohibited characters in
-comments, orphaned tablespaces, and deprecated syntax in stored programs. It is not
-exhaustive, but everything it reports is real, and reading its output is a much
-cheaper way to discover your problems than a failed migration.
+MySQL Shell's checker finds reserved-word collisions, prohibited characters in comments,
+orphaned tablespaces, and deprecated syntax in stored programs. It is not exhaustive,
+but everything it reports is real, and reading its output is a much cheaper way to
+discover your problems than a failed migration.
 
 ## The change that will actually bite: collation
 
@@ -51,11 +51,12 @@ tables, and it looks like an application bug rather than an infrastructure decis
 
 Pick one collation and set it explicitly: server, database, and every migration. The
 decision matters less than the consistency. If you have the appetite, converting
-everything to `utf8mb4_0900_ai_ci` is the forward-looking choice; if you don't, pin
-the server default back to what your tables already use and move on.
+everything to `utf8mb4_0900_ai_ci` is the forward-looking choice; if you don't, pin the
+server default back to what your tables already use and move on.
 
-Sorting also changes with collation, so anything asserting a specific string order (a test, a paginated list, a report) may legitimately change output. That's correct
-behaviour and it will still be reported as a regression.
+Sorting also changes with collation, so anything asserting a specific string order (a
+test, a paginated list, a report) may legitimately change output. That's correct
+behavior and it will still be reported as a regression.
 
 ## Authentication
 
@@ -84,36 +85,36 @@ permanently.
 backticks stops parsing. Views and stored procedures fail validation at upgrade time
 rather than at call time, which is better than the alternative.
 
-The checker catches these. Fixing them means either quoting or renaming, and renaming
-is the one that doesn't recur.
+The checker catches these. Fixing them means either quoting or renaming, and renaming is
+the one that doesn't recur.
 
 ## Things that get better
 
 Worth knowing what you're buying, since the above is all cost:
 
 - **Window functions**. `ROW_NUMBER()`, `RANK()`, `LAG()`. A large class of query
- that previously needed a self-join or application-side work.
+that previously needed a self-join or application-side work.
 - **Common table expressions**, including recursive ones. Hierarchies stop being
- painful.
+painful.
 - **Atomic DDL.** A failed `ALTER` no longer leaves you half-migrated.
 - **Real `JSON` improvements**, including `JSON_TABLE`.
 - **`utf8mb3` is deprecated**, which is a nudge to finish a migration you probably
- started years ago.
+started years ago.
 
 ## The order I'd do it in
 
 1. Run the upgrade checker and fix everything it names.
 2. Decide the collation question deliberately, and write it into your migration
- defaults and framework config before you upgrade rather than after.
+defaults and framework config before you upgrade rather than after.
 3. Upgrade a staging copy from a production dump. Not a fresh schema but a dump, because
- the interesting failures live in data and legacy DDL.
+the interesting failures live in data and legacy DDL.
 4. Run the full test suite, then specifically exercise anything asserting string
- ordering.
+ordering.
 5. Sort out client auth, with a deadline if you're deferring it.
 6. Upgrade production, keeping the 5.7 binaries available for a rollback path.
 
 That last step is written from a self-hosted position, which is where I've done all of
-these. Self-hosting means the rollback is yours: keep the old binaries and a
-pre-upgrade dump, and you can go backwards. On managed MySQL you're working with the
-provider's snapshot-and-restore mechanics instead, which are usually reliable and are
-not the same thing as being able to start the old server.
+these. Self-hosting means the rollback is yours: keep the old binaries and a pre-upgrade
+dump, and you can go backwards. On managed MySQL you're working with the provider's
+snapshot-and-restore mechanics instead, which are usually reliable and are not the same
+thing as being able to start the old server.

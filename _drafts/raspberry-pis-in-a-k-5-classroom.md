@@ -9,11 +9,10 @@ tags: [raspberry-pi, stem, education, scratch]
 published: false
 ---
 
-A Raspberry Pi is a poor computer and an excellent teaching tool, and the reason
-is the same in both cases: nothing is hidden. The board arrives as a bare
-rectangle with legs. Every part a student needs to understand is visible, labeled,
-and reachable, which makes it the rare piece of technology that gets less mysterious the
-closer you look.
+A Raspberry Pi is a poor computer and an excellent teaching tool, and the reason is the
+same in both cases: nothing is hidden. The board arrives as a bare rectangle with legs.
+Every part a student needs to understand is visible, labeled, and reachable, which makes
+it the rare piece of technology that gets less mysterious the closer you look.
 
 <!--more-->
 
@@ -31,8 +30,8 @@ asked of it.
 
 ## Kindergarten through first grade: inputs and outputs
 
-Before any programming, the useful idea is that a computer takes something in and
-puts something out, and that both ends are physical.
+Before any programming, the useful idea is that a computer takes something in and puts
+something out, and that both ends are physical.
 
 A button and an LED are enough. Press the button, the light comes on. Let them wire it
 badly first, then correctly. The learning moment is the failure. The light doesn't come
@@ -55,9 +54,9 @@ A PIR motion sensor is a good second one, because it answers a different kind of
 question. It does not report a measurement. It reports that something changed.
 
 Connection is where the real content is. Sensors attach to the GPIO pins, and those pins
-are not interchangeable. Some carry power. Some are ground. Some carry signal. Getting an
-eight-year-old to read a pinout diagram is teaching them to read a technical reference.
-That skill has a much longer shelf life than the activity does.
+are not interchangeable. Some carry power. Some are ground. Some carry signal. Getting
+an eight-year-old to read a pinout diagram is teaching them to read a technical
+reference. That skill has a much longer shelf life than the activity does.
 
 ## Third grade: Scratch, and the shape of a program
 
@@ -68,10 +67,10 @@ Blocks matter because they make syntax errors impossible. A block either snaps i
 doesn't. What is left to struggle with is the order things happen in. That struggle is
 the point.
 
-Third grade is where the durable concepts land, and they land better if they're
-named. Sequence: this, then this. Loops: do it again until something changes.
-Conditionals: if this is true do that, otherwise do the other thing. Events:
-start when something happens rather than when you say go.
+Third grade is where the durable concepts land, and they land better if they're named.
+Sequence: this, then this. Loops: do it again until something changes. Conditionals: if
+this is true do that, otherwise do the other thing. Events: start when something happens
+rather than when you say go.
 
 Those four ideas are most of programming. Students will meet them again in Python and
 JavaScript and every language after. The transfer is real, as long as someone said the
@@ -79,15 +78,15 @@ words out loud the first time.
 
 ## Fourth grade: connecting the two halves
 
-Scratch on the Pi can read the GPIO pins, which means the sensor from second
-grade and the program from third grade can finally meet.
+Scratch on the Pi can read the GPIO pins, which means the sensor from second grade and
+the program from third grade can finally meet.
 
-This is the first project that feels like engineering rather than an exercise. A
-light that comes on when someone walks past, using the PIR. A room that announces how
-warm it is, using the DHT. And the one that goes over best: an HC-SR04 ultrasonic
-sensor measuring distance, which is where fourth grade earns its place, because the
-sensor reports a round-trip time and you have to divide by two to get a distance.
-That is a genuine unit-conversion problem arriving disguised as a robot.
+This is the first project that feels like engineering rather than an exercise. A light
+that comes on when someone walks past, using the PIR. A room that announces how warm it
+is, using the DHT. And the one that goes over best: an HC-SR04 ultrasonic sensor
+measuring distance, which is where fourth grade earns its place, because the sensor
+reports a round-trip time and you have to divide by two to get a distance. That is a
+genuine unit-conversion problem arriving disguised as a robot.
 
 Each project is a loop, a conditional, and a sensor, so each one is review. It doesn't
 feel like review, because the output is a thing that sits on a shelf and works.
@@ -118,7 +117,7 @@ is consumption, and the explanation on offer is that it just works.
 
 A student who has wired a sensor wrong and then fixed it has a different relationship to
 all of it. Not expertise. A nine-year-old with a temperature sensor is not an engineer.
-What they have is an accurate belief: that these things are made of parts, that the parts
-follow rules, and that the rules can be looked up. That belief is the prerequisite for
-everything downstream. It is much harder to install at seventeen than at seven.
+What they have is an accurate belief: that these things are made of parts, that the
+parts follow rules, and that the rules can be looked up. That belief is the prerequisite
+for everything downstream. It is much harder to install at seventeen than at seven.
 

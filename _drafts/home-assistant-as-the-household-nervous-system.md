@@ -21,10 +21,10 @@ making the household stop noticing when I tinker.
 
 Home Assistant runs several ways and the choice matters more than it looks.
 
-Home Assistant OS in a full VM is the supported path, and it's the one that gets
-add-ons — the supervisor manages them, and the container-only installs don't have it.
-I've previously run the container version and spent time reimplementing by hand what
-add-ons provide for free. Not doing that again.
+Home Assistant OS in a full VM is the supported path, and it's the one that gets add-ons
+— the supervisor manages them, and the container-only installs don't have it. I've
+previously run the container version and spent time reimplementing by hand what add-ons
+provide for free. Not doing that again.
 
 So: a VM, with the official disk image imported rather than an OS installed from
 scratch.
@@ -51,21 +51,21 @@ Pass through by vendor and product ID rather than by port. Pass through by port 
 first time you reseat a cable or the host enumerates devices in a different order, your
 entire smart home is offline and the cause is not obvious.
 
-Zigbee only, in my case. Z-Wave is a perfectly good protocol and adding a second radio is
-a second thing to maintain for no benefit I could identify, so I didn't.
+Zigbee only, in my case. Z-Wave is a perfectly good protocol and adding a second radio
+is a second thing to maintain for no benefit I could identify, so I didn't.
 
 One piece of received wisdom I can't confirm: Zigbee coordinators are said to need a USB
-extension cable to get the radio away from interference from USB 3 ports and the chassis. I
-didn't use one and never had the problem. That may be luck, or it may be that this
-particular combination of coordinator and host doesn't suffer from it, but I'm not going to
-repeat the advice as though I'd verified it. If your mesh is unreliable, try the cable. If
-it isn't, don't go looking for a fix.
+extension cable to get the radio away from interference from USB 3 ports and the
+chassis. I didn't use one and never had the problem. That may be luck, or it may be that
+this particular combination of coordinator and host doesn't suffer from it, but I'm not
+going to repeat the advice as though I'd verified it. If your mesh is unreliable, try
+the cable. If it isn't, don't go looking for a fix.
 
 ## Local control as the actual requirement
 
 The reason to run this at all, rather than using each manufacturer's app, is that
-integrations talking directly to devices on my network keep working when a vendor has
-an outage, changes their API, or shuts down.
+integrations talking directly to devices on my network keep working when a vendor has an
+outage, changes their API, or shuts down.
 
 That's the same argument as the rest of this homelab, and it applies with more force
 here because these devices are physically in my house and several have microphones or
@@ -85,7 +85,7 @@ place, which is what the wall tablets show. This is the least clever and the mos
 feature, because it replaced people asking each other things.
 
 **Schedules.** Lights on a sunset offset rather than a clock time, heating that
-follows occupancy rather than a fixed programme.
+follows occupancy rather than a fixed program.
 
 **Presence and conditions.** The automations that feel like magic when they work and
 like a haunting when they don't, which is why I've kept these deliberately few.
@@ -94,32 +94,32 @@ Six entities. That's the whole installation, and I want to state the number plai
 because the genre this post belongs to is full of dashboards with four hundred of them.
 
 The one that has unambiguously earned its place is the HVAC temperature schedule. In a
-Florida summer, cooling is the electricity bill, and a schedule that follows when the house
-is occupied rather than a fixed programme has been the single clearest saving in
-the whole setup. Not a clever automation. A thermostat that knows what day it is.
+Florida summer, cooling is the electricity bill, and a schedule that follows when the
+house is occupied rather than a fixed program has been the single clearest saving in the
+whole setup. Not a clever automation. A thermostat that knows what day it is.
 
-I'd rather have six things that work than sixty I'm debugging, and the six get used daily by
-people who have no idea Home Assistant exists.
+I'd rather have six things that work than sixty I'm debugging, and the six get used
+daily by people who have no idea Home Assistant exists.
 
 ## What broke
 
 The tablets, which is fitting, since they're the reason I started this four years ago.
 
-A Fire 7 running LineageOS makes a fine wall panel and a poor kiosk. The hardware wants to
-behave like a tablet (sleep the screen, drop the wifi to save power, background the
+A Fire 7 running LineageOS makes a fine wall panel and a poor kiosk. The hardware wants
+to behave like a tablet (sleep the screen, drop the wifi to save power, background the
 browser) and a wall display needs the opposite of all three. Getting a dashboard to stay
-up, stay awake, and reconnect after the access point blips is a set of small fights rather
-than one configuration change.
+up, stay awake, and reconnect after the access point blips is a set of small fights
+rather than one configuration change.
 
-The specific difficulty is that "keep the screen on" and "don't burn the battery and cook
-the device" are in tension, and a tablet mounted on a wall is on mains power permanently,
-which is not what its firmware assumes. Anything left at full brightness indefinitely runs
-warm, and these are not well-cooled devices.
+The specific difficulty is that "keep the screen on" and "don't burn the battery and
+cook the device" are in tension, and a tablet mounted on a wall is on mains power
+permanently, which is not what its firmware assumes. Anything left at full brightness
+indefinitely runs warm, and these are not well-cooled devices.
 
-What I'd tell anyone doing this: solve wake behaviour and reconnection before you spend any
-time on how the dashboard looks. A beautiful panel showing a stale page is worse than a
-plain one that's correct, because people stop trusting it and go back to asking each
-other.
+What I'd tell anyone doing this: solve wake behavior and reconnection before you spend
+any time on how the dashboard looks. A beautiful panel showing a stale page is worse
+than a plain one that's correct, because people stop trusting it and go back to asking
+each other.
 
 ## What I'd do differently
 

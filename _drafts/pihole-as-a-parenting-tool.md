@@ -9,11 +9,11 @@ tags: [pihole, dns, networking, self-hosting]
 published: false
 ---
 
-Every device my kids use has its own parental controls, each with a different
-interface, a different account, and a different set of gaps. A handheld console has
-nothing useful at all. DNS filtering sits below all of that: one place, one set of
-rules, and it applies to anything that joins the network — which is both the reason to
-do it and the reason it isn't sufficient.
+Every device my kids use has its own parental controls, each with a different interface,
+a different account, and a different set of gaps. A handheld console has nothing useful
+at all. DNS filtering sits below all of that: one place, one set of rules, and it
+applies to anything that joins the network — which is both the reason to do it and the
+reason it isn't sufficient.
 
 <!--more-->
 
@@ -22,8 +22,8 @@ do it and the reason it isn't sufficient.
 Worth being precise, because it's routinely oversold.
 
 **It can** block a request to a known domain before a connection is made, network-wide,
-for devices that have no controls of their own. It removes most advertising and
-tracking as a side effect, which is a genuine performance and privacy win for the whole
+for devices that have no controls of their own. It removes most advertising and tracking
+as a side effect, which is a genuine performance and privacy win for the whole
 household.
 
 **It cannot** filter within a site. It won't block one video on a platform you allow. It
@@ -54,17 +54,17 @@ Then the part people skip: the router hands out Pi-hole as the *only* resolver v
 Leaving a secondary public resolver in the DHCP options means clients will silently use
 it whenever it answers first, and you'll conclude filtering doesn't work.
 
-That creates a single point of failure for all name resolution in the house, which is the
-honest cost. A second instance with `keepalived` is the proper answer.
+That creates a single point of failure for all name resolution in the house, which is
+the honest cost. A second instance with `keepalived` is the proper answer.
 
 I run one. So when that container goes down, the internet is down for everybody, and the
-first time it happened during somebody's call I heard about it in detail. There's no clever
-mitigation to report. It's a known, accepted fragility, and the fix is on a list.
+first time it happened during somebody's call I heard about it in detail. There's no
+clever mitigation to report. It's a known, accepted fragility, and the fix is on a list.
 
-If you're setting this up for a household rather than for yourself, I'd genuinely consider
-running two from the start. The second instance costs almost nothing on hardware you already
-have, and the cost of the outage is not measured in downtime, it's measured in whether
-anyone lets you keep doing this.
+If you're setting this up for a household rather than for yourself, I'd genuinely
+consider running two from the start. The second instance costs almost nothing on
+hardware you already have, and the cost of the outage is not measured in downtime, it's
+measured in whether anyone lets you keep doing this.
 
 ## Per-device policy, which is the actually useful bit
 
@@ -83,29 +83,29 @@ My workstation  → ads and trackers, with a permissive allowlist
 
 For the kids' group I'm using the standard curated blocklists maintained by one of the
 parental-safety projects on GitHub, rather than assembling categories myself. That's a
-deliberate choice: a maintained list gets updated as domains move, and my hand-rolled list
-would be accurate the week I wrote it and rotting thereafter.
+deliberate choice: a maintained list gets updated as domains move, and my hand-rolled
+list would be accurate the week I wrote it and rotting thereafter.
 
-Safe Search is enforced for their devices too, which is a separate piece of configuration
-from blocking. It works by DNS rewrite — the major search engines publish dedicated
-hostnames that force their filtered variant, and you point the normal hostname at those.
-Worth doing, and worth knowing it's a different mechanism, because it means Safe Search
-holds even where a blocklist has no opinion.
+Safe Search is enforced for their devices too, which is a separate piece of
+configuration from blocking. It works by DNS rewrite — the major search engines publish
+dedicated hostnames that force their filtered variant, and you point the normal hostname
+at those. Worth doing, and worth knowing it's a different mechanism, because it means
+Safe Search holds even where a blocklist has no opinion.
 
 ## What broke
 
 A device with a hardcoded resolver, which is the failure that matters most because it
 doesn't look like a failure.
 
-Plenty of consumer hardware ignores the DNS server handed out by DHCP and talks to a public
-resolver it was shipped with. From the Pi-hole side everything appears healthy — the
-dashboard shows queries, blocking works, other devices behave. The device in question simply
-isn't asking you, so none of your rules apply to it, and you have no signal that this is
-happening because absence of queries looks like absence of activity.
+Plenty of consumer hardware ignores the DNS server handed out by DHCP and talks to a
+public resolver it was shipped with. From the Pi-hole side everything appears healthy —
+the dashboard shows queries, blocking works, other devices behave. The device in
+question simply isn't asking you, so none of your rules apply to it, and you have no
+signal that this is happening because absence of queries looks like absence of activity.
 
-The fix is at the router rather than at Pi-hole: a firewall rule that intercepts outbound
-DNS and redirects it to your own resolver, so a device asking elsewhere gets your answer
-regardless of what it intended.
+The fix is at the router rather than at Pi-hole: a firewall rule that intercepts
+outbound DNS and redirects it to your own resolver, so a device asking elsewhere gets
+your answer regardless of what it intended.
 
 ```
 # redirect any outbound port 53 from the LAN to Pi-hole
@@ -115,13 +115,13 @@ iptables -t nat -A PREROUTING -i br-lan -p tcp --dport 53 \
   -j DNAT --to-destination 10.0.0.53
 ```
 
-This is the step that turns filtering from something that works on cooperative devices into
-something that works on the network. Without it, the whole exercise is opt-in, and the
-devices least likely to cooperate are exactly the cheap ones you have the least control
-over otherwise.
+This is the step that turns filtering from something that works on cooperative devices
+into something that works on the network. Without it, the whole exercise is opt-in, and
+the devices least likely to cooperate are exactly the cheap ones you have the least
+control over otherwise.
 
-It does nothing about DNS-over-HTTPS, which travels over 443 and is indistinguishable from
-ordinary web traffic. That gap is real and I haven't closed it.
+It does nothing about DNS-over-HTTPS, which travels over 443 and is indistinguishable
+from ordinary web traffic. That gap is real and I haven't closed it.
 
 ## What I'd do differently
 

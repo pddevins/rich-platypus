@@ -56,6 +56,27 @@ how much damage they do:
 - **Uniform paragraph length.** Three-to-four-sentence paragraphs all the way
   down is a rhythm no human sustains.
 
+### American English
+
+Patrick is American and writes American English. Use `-ize` and `-or` endings,
+American vocabulary, and American date phrasing.
+
+behavior, color, recognize, optimize, standardize, organization, emphasize,
+license, program, gray, judgment, toward, two weeks. Not behaviour, colour,
+recognise, optimise, licence, programme, grey, judgement, towards, fortnight.
+
+This catches models out constantly, because the British forms are common in
+training data. Grep before publishing:
+
+```bash
+grep -rniE '\b(behaviour|colour|favour|honour|fortnight|whilst|amongst|learnt|licence|programme|defence|centre|judgement|towards|grey)\b|\b(recognis|optimis|organis|emphasis|realis|apologis|sanitis|standardis|categoris|prioritis|summaris|specialis|utilis|practis)(e|es|ed|ing|ation|ations)\b' _drafts/ docs/
+```
+
+Note the second half matches only the verb endings. A bare `optimis` or `realis`
+prefix also matches "optimistic" and "realistic", which are correct.
+
+"Fortnight" in particular is a word he has never used.
+
 ### Phrases to ration, not ban
 
 Each of these is fine once in a piece and a tell by the third use. Grep before

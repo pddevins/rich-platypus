@@ -9,15 +9,18 @@ tags: [laravel, php]
 published: false
 ---
 
-Laravel 13 arrived in March. If you're still on 11, you're skipping a major. That sounds worse than it is, because 12 and 13 were both deliberately small releases. The
-framework side of this is genuinely quick. The PHP requirement is the part that will
-determine your timeline.
+Laravel 13 arrived in March. If you're still on 11, you're skipping a major. That sounds
+worse than it is, because 12 and 13 were both deliberately small releases. The framework
+side of this is genuinely quick. The PHP requirement is the part that will determine
+your timeline.
 
 <!--more-->
 
 ## Check the one thing that actually blocks you
 
-Laravel 13 requires **PHP 8.3 minimum**, and everything else in this post is easy by comparison, because this is the item that turns a morning into a quarter if you're on 8.1 or 8.2.
+Laravel 13 requires **PHP 8.3 minimum**, and everything else in this post is easy by
+comparison, because this is the item that turns a morning into a quarter if you're on
+8.1 or 8.2.
 
 ```bash
 php -v
@@ -53,34 +56,36 @@ php artisan about
 composer test
 ```
 
-Of those, `php artisan about` is the fastest confirmation that the framework and all of its drivers came up cleanly.
+Of those, `php artisan about` is the fastest confirmation that the framework and all of
+its drivers came up cleanly.
 
 ## Why this is easier than it sounds
 
-Both releases emphasised backward compatibility, and Laravel 13 in particular shipped
+Both releases emphasized backward compatibility, and Laravel 13 in particular shipped
 essentially no breaking changes beyond the PHP floor. The official upgrade guide
-estimates about ten minutes for many applications, and for once that's not marketing. If your app is on 11 and reasonably conventional, it may be a version bump and
-a test run.
+estimates about ten minutes for many applications, and for once that's not marketing. If
+your app is on 11 and reasonably conventional, it may be a version bump and a test run.
 
 For anything less conventional, [Laravel Shift](https://laravelshift.com) handles the
 mechanical parts of a two-major jump and is worth the fee purely for the diff it
 produces, which doubles as a checklist.
 
-Read both upgrade guides rather than only the 13 one, because skipping a major means the 12 changes apply to you as well and they aren't repeated in the 13 notes.
+Read both upgrade guides rather than only the 13 one, because skipping a major means the
+12 changes apply to you as well and they aren't repeated in the 13 notes.
 
 ## What you get
 
 Worth knowing what the upgrade is buying, since it's all optional:
 
 - **PHP attributes** for framework configuration, as an alternative to convention and
- method calls. Optional and fully backward compatible.
+method calls. Optional and fully backward compatible.
 - **Passkeys** support out of the box: WebAuthn without assembling it from packages.
- The most immediately useful item here for anything with user accounts.
+The most immediately useful item here for anything with user accounts.
 - **First-party JSON:API support**, with resource classes handling serialisation,
- relationship inclusion, sparse fieldsets, and compliant response headers. If you've
- hand-rolled JSON:API before, this is a large amount of code you get to delete.
+relationship inclusion, sparse fieldsets, and compliant response headers. If you've
+hand-rolled JSON:API before, this is a large amount of code you get to delete.
 - **`Queue::route()`**, which puts the queue and connection for each job class in one
- place in a service provider rather than scattered across job definitions.
+place in a service provider rather than scattered across job definitions.
 - **`Cache::touch()`**, for extending a TTL without a read and rewrite.
 - **A Reverb database driver**, and the Laravel AI SDK reaching stable.
 
@@ -88,11 +93,12 @@ Worth knowing what the upgrade is buying, since it's all optional:
 
 Laravel's policy is 18 months of bug fixes and two years of security fixes for every
 release, with no LTS designation since Laravel 6. In practice that puts Laravel 12's bug
-fixes ending **13 August 2026** and its security fixes **24 February 2027**; Laravel 13 runs
-to roughly Q3 2027 for bug fixes and Q1 2028 for security.
+fixes ending **13 August 2026** and its security fixes **24 February 2027**; Laravel 13
+runs to roughly Q3 2027 for bug fixes and Q1 2028 for security.
 
-So if you're on 11, you're already outside bug-fix support and running on security patches
-alone. Not an emergency, and not something to leave much longer either. A zero-breaking-change major is the cheapest upgrade you will ever get, and they get more
+So if you're on 11, you're already outside bug-fix support and running on security
+patches alone. Not an emergency, and not something to leave much longer either. A
+zero-breaking-change major is the cheapest upgrade you will ever get, and they get more
 expensive the longer you leave them.
 
 The order I'd run it: PHP to 8.3 first, ship that, live with it for a week, then the
@@ -100,10 +106,12 @@ framework jump as its own change.
 
 ## Having done it
 
-I've run this on a couple of projects that needed it, and it was straightforward both times. The official ten-minute estimate is optimistic as a total but honest about the framework
-step itself. It was a bump, a cache clear, a test run, and then it was finished.
+I've run this on a couple of projects that needed it, and it was straightforward both
+times. The official ten-minute estimate is optimistic as a total but honest about the
+framework step itself. It was a bump, a cache clear, a test run, and then it was
+finished.
 
-Both projects were already on PHP 8.3, which is the reason it went that smoothly, and it's
-why I keep separating the two upgrades in this post. Every hour I've ever lost to a Laravel
-major has been a PHP major or a dependency wearing a Laravel costume. Get the
+Both projects were already on PHP 8.3, which is the reason it went that smoothly, and
+it's why I keep separating the two upgrades in this post. Every hour I've ever lost to a
+Laravel major has been a PHP major or a dependency wearing a Laravel costume. Get the
 language sorted first and the framework jump really is an afternoon.

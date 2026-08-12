@@ -10,15 +10,14 @@ published: false
 ---
 
 PHP 8.4 shipped in November, and unlike 8.2 or 8.3 it contains changes that affect
-design rather than syntax. Property hooks and asymmetric visibility both remove a
-reason to write a class the way we've been writing them.
+design rather than syntax. Property hooks and asymmetric visibility both remove a reason
+to write a class the way we've been writing them.
 
 <!--more-->
 
 ## Property hooks
 
-You can now attach behaviour to a property directly instead of hiding it behind a
-method:
+You can now attach behavior to a property directly instead of hiding it behind a method:
 
 ```php
 class Order
@@ -74,7 +73,8 @@ $all   = array_all($orders, fn ($o) => $o->isPaid());
 ```
 
 Every codebase had these as helpers, or reached for Laravel's collections to get them.
-Now they're native. Laravel users will mostly keep using collections, and that's fine. The win is for library code that shouldn't depend on a framework.
+Now they're native. Laravel users will mostly keep using collections, and that's fine.
+The win is for library code that shouldn't depend on a framework.
 
 ## Instantiation without the extra parentheses
 
@@ -98,15 +98,15 @@ For Laravel specifically: both 11 and 12 support PHP 8.4 while still requiring o
 language without touching the framework.
 
 One additional note for 8.4. Property hooks and asymmetric visibility are new syntax, so
-anything parsing PHP source (static analysis, IDE tooling) needs to understand them before
-you can use them without noise. Check PHPStan and Psalm versions before writing hooks
-throughout a codebase.
+anything parsing PHP source (static analysis, IDE tooling) needs to understand them
+before you can use them without noise. Check PHPStan and Psalm versions before writing
+hooks throughout a codebase.
 
 ## Having used them a little
 
-I haven't rewritten anything to use property hooks, and I don't intend to. What I've done
-instead is reach for them per-property, where a specific property had a specific reason to
-need behaviour, which I think is the correct dose.
+I haven't rewritten anything to use property hooks, and I don't intend to. What I've
+done instead is reach for them per-property, where a specific property had a specific
+reason to need behavior, which I think is the correct dose.
 
 That's worth saying because the framing around a feature like this pushes toward
 adoption as a style. Hooks are not a better way to write properties. They're a way to
@@ -116,4 +116,4 @@ arbitrary code behind field access throughout a codebase, and someone will event
 find a query in there.
 
 Asymmetric visibility is the one I'd use broadly without hesitation. It expresses an
-intent I have constantly, and it has no hidden behaviour at all.
+intent I have constantly, and it has no hidden behavior at all.

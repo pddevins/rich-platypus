@@ -71,6 +71,9 @@ drafts on build). Front matter follows the contract in the guide exactly, with
   whether a period, comma, colon, or set of parentheses does the job. A
   parenthetical containing commas always wants parentheses, never paired dashes.
   Count them before you finish; the per-era ceiling is in §1b and it is low.
+- **Write American English.** `-ize` and `-or` endings, American vocabulary. Not
+  behaviour/colour/recognise/optimise/licence/programme/grey/towards, and never
+  "fortnight."
 - **Ration the filler words.** `actually`, `genuinely`, `precisely`, `worth
   noting`, `the whole point`, `load-bearing`, `in practice`. Each is fine once
   and a tell by the third use. Grep your own draft.

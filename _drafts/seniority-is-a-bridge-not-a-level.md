@@ -17,9 +17,9 @@ which crossing you're in the middle of until you're most of the way over.
 <!--more-->
 
 I came back from time off today. It was my birthday, spent deliberately not thinking
-about work, and the first thing on my mind afterward was a developer I've been mentoring.
-Mid-career. Genuinely good. Stuck in the particular way that people get stuck when
-they've cleared every obvious bar and nobody has told them what the next one is.
+about work, and the first thing on my mind afterward was a developer I've been
+mentoring. Mid-career. Genuinely good. Stuck in the particular way that people get stuck
+when they've cleared every obvious bar and nobody has told them what the next one is.
 
 The conversation I used to have in that situation was about requirements. Here is what
 senior means at this company. Here are your gaps. Close them.
@@ -73,10 +73,10 @@ been giving advice that only works for people with a financial cushion.
 
 So both things have to be handled. Get the person paid and promoted. That is my job, not
 theirs. But don't confuse it with the other work. The promotion is a lagging indicator
-of a case someone else built. What I am trying to help with is the part that doesn't show
-up in the packet: whether five years from now they are doing work that still interests
-them, or whether they optimized successfully toward a version of themselves they don't
-much like.
+of a case someone else built. What I am trying to help with is the part that doesn't
+show up in the packet: whether five years from now they are doing work that still
+interests them, or whether they optimized successfully toward a version of themselves
+they don't much like.
 
 The developers I have watched navigate this best were not the ones who climbed fastest.
 They were the ones who could tell you, specifically and without hedging, which part of
@@ -85,6 +85,6 @@ getting more of it. Sometimes that meant a smaller client. Sometimes it meant a 
 that looked sideways on paper.
 
 Privately, I think of my part in this as riding shotgun rather than driving. I can read
-the map, say what's coming, and mention when I think a turn is about to be missed. But it
-is their route. And the destination isn't a level. It's a morning some years from now
+the map, say what's coming, and mention when I think a turn is about to be missed. But
+it is their route. And the destination isn't a level. It's a morning some years from now
 when the work in front of them is work they would choose.

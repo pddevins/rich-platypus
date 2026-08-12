@@ -19,9 +19,9 @@ process.
 
 ## Why do this at all
 
-A threat model without an inventory is a mood. "I care about privacy" produces
-scattered decisions (a VPN here, a password manager there) with no way to tell
-whether any of them addressed something that mattered.
+A threat model without an inventory is a mood. "I care about privacy" produces scattered
+decisions (a VPN here, a password manager there) with no way to tell whether any of them
+addressed something that mattered.
 
 The specific question OSINT answers is: what can somebody assemble about me, starting
 from nothing, in an afternoon, for free? That's a well-defined adversary. It isn't a
@@ -75,8 +75,8 @@ accurate. Every address, in order, with phone numbers attached. This is the data
 material and it is the bulk of the exposure.
 
 **No valid email addresses and no social media accounts.** Genuinely nothing usable. That
-surprised me more than the address history did, because it's the half that matters most for
-account takeover, and it's the half I've actually managed.
+surprised me more than the address history did, because it's the half that matters most
+for account takeover, and it's the half I've actually managed.
 
 **A GitHub repository on the first page of results.** First page. Which is the reminder
 that professional visibility and personal exposure use the same channel, and that the
@@ -86,17 +86,17 @@ elsewhere.
 **Personal information didn't appear until page four of a plain search.** Which brings me to
 the most useful and least reproducible finding.
 
-I share a name with a character from *True Blood*, and I suspect that's doing more for my
-obscurity than anything I've deliberately configured. Search results for my name are
+I share a name with a character from *True Blood*, and I suspect that's doing more for
+my obscurity than anything I've deliberately configured. Search results for my name are
 substantially about a fictional Marine from an HBO series, and a mildly motivated person
 working within thirty minutes plausibly gives up before page four.
 
 That's worth dwelling on because it's the opposite of a security control. It's luck. It
 isn't a strategy, it can evaporate if the show's cultural footprint shifts, and it does
-nothing whatsoever against anybody who queries a broker directly instead of a search engine.
-Anyone with a distinctive name has none of it. But it does illustrate something real about
-how this works in practice: obscurity is a genuine component of exposure, and most
-of yours is not under your control.
+nothing whatsoever against anybody who queries a broker directly instead of a search
+engine. Anyone with a distinctive name has none of it. But it does illustrate something
+real about how this works in practice: obscurity is a genuine component of exposure, and
+most of yours is not under your control.
 
 ## Reducing the surface
 
@@ -130,23 +130,23 @@ It won't tell you anything about a targeted adversary with money, legal authorit
 access to non-public data. It doesn't address platform-level tracking or the advertising
 ecosystem, both of which are separate problems with separate answers. And it will not
 make you unfindable — if you have worked, voted, owned property, or held a professional
-licence, you are in public records, and no amount of opting out changes that.
+license, you are in public records, and no amount of opting out changes that.
 
 The realistic outcome is a smaller, more accurate, more current profile of you in
 circulation, and a list you can revisit. That's worth thirty minutes, and it's a
 considerably better use of them than another argument about which VPN to buy.
 
-One admission, since recommending work you haven't done is a bad look. **I haven't scrubbed
-the broker data.** Twenty years of address and phone history is still sitting out there,
-and I've read my own list and decided not to act on that part of it.
+One admission, since recommending work you haven't done is a bad look. **I haven't
+scrubbed the broker data.** Twenty years of address and phone history is still sitting
+out there, and I've read my own list and decided not to act on that part of it.
 
 That's a considered position rather than laziness. I know what's exposed, I know what it
 enables (locators and correlation material, tiers three and four, not authentication
-material) and I've accounted for it in how I've set up the parts that would hurt.
-The addresses are historical. The authentication surface is where I spent the effort, and
+material) and I've accounted for it in how I've set up the parts that would hurt. The
+addresses are historical. The authentication surface is where I spent the effort, and
 that's the part the search came back clean on.
 
 Which is really the argument of this whole post. The inventory isn't valuable because it
-tells you to fix everything. It's valuable because it lets you decide what not to fix, on
-purpose, with the list in front of you — rather than defaulting to whichever measure a blog
-post recommended last.
+tells you to fix everything. It's valuable because it lets you decide what not to fix,
+on purpose, with the list in front of you — rather than defaulting to whichever measure
+a blog post recommended last.

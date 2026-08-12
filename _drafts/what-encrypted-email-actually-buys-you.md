@@ -20,10 +20,12 @@ threat it addresses.
 ## The thing that can't be fixed
 
 When you send mail to someone on Gmail, that message arrives on Google's servers and
-Google can read it. This is true regardless of your provider. It holds whether you use Tuta, Proton, your own server, or a machine in a vault.
+Google can read it. This is true regardless of your provider. It holds whether you use
+Tuta, Proton, your own server, or a machine in a vault.
 
-SMTP has no transport-agnostic end-to-end encryption. TLS between servers protects the hop rather than the contents at rest on the other end, so the moment your correspondent is on
-a mainstream provider, which is nearly always, the confidentiality of that
+SMTP has no transport-agnostic end-to-end encryption. TLS between servers protects the
+hop rather than the contents at rest on the other end, so the moment your correspondent
+is on a mainstream provider, which is nearly always, the confidentiality of that
 conversation is set by their provider, not yours.
 
 Both companies are honest about this if you read carefully, and both market in a way
@@ -60,26 +62,26 @@ protection from someone with your password, and metadata privacy. Those are the 
 
 They're grouped together and they've made genuinely different trade-offs.
 
-**Proton** optimises for interoperability. It implements OpenPGP, so you can exchange
+**Proton** optimizes for interoperability. It implements OpenPGP, so you can exchange
 properly encrypted mail with anyone using PGP outside Proton, and it offers IMAP and
 SMTP through a local bridge so you can keep using a normal mail client. That makes it
 usable inside an existing workflow, and it means the encryption is a standard rather
 than a proprietary scheme. It's also a wider suite (calendar, drive, VPN) which is
 convenient and is also more of your life in one basket.
 
-**Tuta** optimises for encrypting more. It encrypts the subject line and the address book,
+**Tuta** optimizes for encrypting more. It encrypts the subject line and the address book,
 which PGP conventionally does not, and it uses its own protocol rather than OpenPGP. The
 cost of that choice is real: no IMAP, so you use their clients, and no PGP
 interoperability.
 
 They've also gone furthest on post-quantum. TutaCrypt is a hybrid — CRYSTALS-Kyber for
-post-quantum key encapsulation alongside X25519 for the classical elliptic-curve exchange —
-and it's on by default for new accounts. The threat it addresses is "harvest now, decrypt
-later": an adversary storing your ciphertext today against the possibility of breaking it in
-fifteen years. Whether that's your problem depends entirely on whether anything you write
-still matters in fifteen years, which for most mail is no and for some is emphatically yes.
-The hybrid construction is the sensible engineering call regardless, since it can only be as
-weak as the stronger of two independent mechanisms.
+post-quantum key encapsulation alongside X25519 for the classical elliptic-curve
+exchange — and it's on by default for new accounts. The threat it addresses is "harvest
+now, decrypt later": an adversary storing your ciphertext today against the possibility
+of breaking it in fifteen years. Whether that's your problem depends entirely on whether
+anything you write still matters in fifteen years, which for most mail is no and for
+some is emphatically yes. The hybrid construction is the sensible engineering call
+regardless, since it can only be as weak as the stronger of two independent mechanisms.
 
 The trade is legible once stated. Proton gives you compatibility with the existing
 encrypted-mail world. Tuta gives you a smaller unencrypted surface inside your own
@@ -92,7 +94,8 @@ by the machines routing the mail.
 
 Reasonable, in descending order of how much I'd insist:
 
-**Almost everyone**, on the grounds that your mailbox is the most sensitive account you own (it's the recovery path for everything else), and having it read for advertising is
+**Almost everyone**, on the grounds that your mailbox is the most sensitive account you
+own (it's the recovery path for everything else), and having it read for advertising is
 a bad default. This is a low-effort, permanent improvement.
 
 **Anyone whose work involves other people's sensitive information.** Not because
@@ -110,17 +113,17 @@ you, email is the wrong channel entirely and the provider is not the question.
 Migrating email is unpleasant, so do it once and properly.
 
 Own a domain and use it. This is the single most important decision, and it's
-independent of provider. Mail at your own domain means switching provider later is a
-DNS change instead of telling four hundred contacts a new address. Both services
-support custom domains on paid plans. Being locked into `@proton.me` recreates the
-problem you left Gmail to escape.
+independent of provider. Mail at your own domain means switching provider later is a DNS
+change instead of telling four hundred contacts a new address. Both services support
+custom domains on paid plans. Being locked into `@proton.me` recreates the problem you
+left Gmail to escape.
 
 Then separate addresses by function (financial, personal, shopping, public) on that
 domain. That does more for your actual security posture than the encryption does,
 because it limits what one compromise reaches.
 
-And keep the old mailbox alive for a year rather than closing it. Account recovery addresses
-surface for a surprisingly long time.
+And keep the old mailbox alive for a year rather than closing it. Account recovery
+addresses surface for a surprisingly long time.
 
 ## What I do
 
@@ -128,18 +131,18 @@ I run both, and not out of indecision. They're split by who I'm talking to.
 
 **Proton for people I know.** Personal correspondence with real contacts, where the
 relationship is established and I want mail that behaves like mail: IMAP through the
-bridge, a normal client, PGP available if the other end has it. Since this is the mailbox
-that has to interoperate, I use the one built to interoperate. The bridge is a paid-plan
-feature and runs as a local application on your own machine, so IMAP works by
+bridge, a normal client, PGP available if the other end has it. Since this is the
+mailbox that has to interoperate, I use the one built to interoperate. The bridge is a
+paid-plan feature and runs as a local application on your own machine, so IMAP works by
 proxying through software you're running rather than by the provider exposing it.
 
 **Tuta for everyone else.** Signups, online services, people I've dealt with once,
-anything where a mailbox is a requirement rather than a conversation. This is the higher-risk
-correspondence (more likely to be breached, more likely to be sold, more likely to be a
-stranger) and it's where Tuta's larger encrypted footprint and closed ecosystem are
-advantages rather than costs. No IMAP is fine here. I don't want this mail in a general
-client anyway.
+anything where a mailbox is a requirement rather than a conversation. This is the
+higher-risk correspondence (more likely to be breached, more likely to be sold, more
+likely to be a stranger) and it's where Tuta's larger encrypted footprint and closed
+ecosystem are advantages rather than costs. No IMAP is fine here. I don't want this mail
+in a general client anyway.
 
 The split falls out of what each is good at, and it also happens to be a segmentation
-strategy. A breach on the online-services side reaches an address that isn't the recovery
-path for anything that matters.
+strategy. A breach on the online-services side reaches an address that isn't the
+recovery path for anything that matters.

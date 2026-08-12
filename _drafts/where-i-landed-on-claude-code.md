@@ -9,11 +9,11 @@ tags: [ai-tooling, developer-experience, php]
 published: false
 ---
 
-Fifteen months ago I wrote that AI developer workflows optimise a step that was never my
-bottleneck, and that generating code I then have to understand moves effort from the thing
-I'm fast at to the thing I'm slow at. I still think that was correct about the workflow I
-was describing. I now use Claude Code every working day, and the reason has almost nothing
-to do with the argument I was having.
+Fifteen months ago I wrote that AI developer workflows optimize a step that was never my
+bottleneck, and that generating code I then have to understand moves effort from the
+thing I'm fast at to the thing I'm slow at. I still think that was correct about the
+workflow I was describing. I now use Claude Code every working day, and the reason has
+almost nothing to do with the argument I was having.
 
 <!--more-->
 
@@ -24,9 +24,9 @@ wrong.
 
 **You are still the architect.** Nothing about this arrangement chooses between two
 designs, decides what the client actually needs, or tells you which of two subsystems
-should own a responsibility. Those remain judgement calls made by someone who
-understands the business and the codebase, and delegating them produces work that looks
-finished and is structurally wrong.
+should own a responsibility. Those remain judgment calls made by someone who understands
+the business and the codebase, and delegating them produces work that looks finished and
+is structurally wrong.
 
 **You still have to do the research.** Understanding how an application is put together
 — where the seams are, which patterns are deliberate, what a change ripples into — is
@@ -57,30 +57,30 @@ reproduce.
 That's the same class of work a very thorough senior reviewer does on a good day, done
 consistently rather than when someone has time.
 
-A concrete one, sanitised. While tracing an unrelated bug, the pass flagged an export action
-calling a relationship that didn't exist on the model it was called against — singular where
-the relation was plural. Valid-looking code, no static analysis complaint, and a
-`BadMethodCallException` waiting for the first person to click that particular export button.
-It had presumably been sitting there for months. Nothing in a normal workflow was going to
-find it: it wasn't in the diff being reviewed, it wasn't on any path the tests covered, and
-it wasn't what anyone was looking for. It surfaced because the sweep didn't know it was
-supposed to stay on topic.
+A concrete one, sanitized. While tracing an unrelated bug, the pass flagged an export
+action calling a relationship that didn't exist on the model it was called against —
+singular where the relation was plural. Valid-looking code, no static analysis
+complaint, and a `BadMethodCallException` waiting for the first person to click that
+particular export button. It had presumably been sitting there for months. Nothing in a
+normal workflow was going to find it: it wasn't in the diff being reviewed, it wasn't on
+any path the tests covered, and it wasn't what anyone was looking for. It surfaced
+because the sweep didn't know it was supposed to stay on topic.
 
 That's the shape of the value. Not "wrote my feature." Found a latent runtime error in a
 code path adjacent to the one I was working in.
 
-Edge cases follow the same pattern. Asking what inputs break this, with an instruction to be
-exhaustive rather than helpful, produces a list where most items are irrelevant and two are
-things I hadn't considered. The hit rate is low and the cost of reading a list is also low,
-which is a fine trade. It's the inverse of the code-generation trade I objected to, where
-the cost of evaluating the output was high.
+Edge cases follow the same pattern. Asking what inputs break this, with an instruction
+to be exhaustive rather than helpful, produces a list where most items are irrelevant
+and two are things I hadn't considered. The hit rate is low and the cost of reading a
+list is also low, which is a fine trade. It's the inverse of the code-generation trade I
+objected to, where the cost of evaluating the output was high.
 
 The other category worth naming is specification ambiguity caught at planning time. A
-requested report asked for a total "sold online," which sounds unambiguous until you notice
-the data model has no online/offline distinction in it at all. Every sale is simply a sale.
-The number was computable, but it could not mean what the person asking believed it meant.
-Surfacing that during planning cost a conversation. Surfacing it after delivery would have
-cost trust in every figure on the page.
+requested report asked for a total "sold online," which sounds unambiguous until you
+notice the data model has no online/offline distinction in it at all. Every sale is
+simply a sale. The number was computable, but it could not mean what the person asking
+believed it meant. Surfacing that during planning cost a conversation. Surfacing it
+after delivery would have cost trust in every figure on the page.
 
 ## Skills and instructions are what make it work
 
@@ -109,15 +109,16 @@ conventions appears in seconds rather than minutes, and the review pass describe
 would take me an hour by hand.
 
 The losses are also real, and they're lumpier. There are sessions where I spend hours
-iterating on a feature (refining, correcting, re-explaining) and end up discarding all of
-it and writing the thing myself in forty minutes. Those are expensive precisely because they
-don't feel like failure while they're happening. Each iteration looks like progress. The sunk
-cost accumulates quietly, and the point at which I should have stopped is only visible
-afterwards.
+iterating on a feature (refining, correcting, re-explaining) and end up discarding all
+of it and writing the thing myself in forty minutes. Those are expensive precisely
+because they don't feel like failure while they're happening. Each iteration looks like
+progress. The sunk cost accumulates quietly, and the point at which I should have
+stopped is only visible afterwards.
 
-It's roughly the usual eighty-twenty: four sessions in five land somewhere useful, and the
-fifth is a write-off. I'd expected that ratio to improve as I got better at this, and it
-mostly hasn't — what's improved is how quickly I recognise which kind of session I'm in.
+It's roughly the usual eighty-twenty: four sessions in five land somewhere useful, and
+the fifth is a write-off. I'd expected that ratio to improve as I got better at this,
+and it mostly hasn't — what's improved is how quickly I recognize which kind of session
+I'm in.
 
 The gaps are usually comprehension gaps. When a feature depends on understanding *why*
 the application is shaped a particular way (a constraint that lives in a client
@@ -125,12 +126,12 @@ conversation, a deliberate inconsistency with a reason) the output will be local
 sensible and globally wrong, and no amount of further refining fixes it, because the
 missing thing isn't in the codebase to be found.
 
-I've learned to recognise the smell earlier: when the second correction is about the
+I've learned to recognize the smell earlier: when the second correction is about the
 same misunderstanding as the first, stop and write it myself. That single rule has
 recovered most of the wasted time.
 
-Net across the whole stretch: I'd call it even on hours, and comfortably ahead on defects
-that didn't reach a client.
+Net across the whole stretch: I'd call it even on hours, and comfortably ahead on
+defects that didn't reach a client.
 
 ## Why I still use it, given all that
 
@@ -142,7 +143,7 @@ still holding the design in my head costs a rethink. The same interaction found 
 costs a ticket and a context switch; found by a client, it costs credibility. The value
 isn't the hours, it's the stage at which things surface — which is the same argument I
 made for test-driven development a couple of years back, and it's a little embarrassing
-that I didn't recognise it sooner.
+that I didn't recognize it sooner.
 
 It doesn't replace anything. I'm doing the same architecture, the same research, the
 same planning, and I'm still responsible for every line that ships. What it does is

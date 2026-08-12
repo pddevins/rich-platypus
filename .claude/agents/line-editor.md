@@ -34,6 +34,11 @@ piece out of its era's band, in either direction.
   conjunction, a colon where the second half expands the first, and parentheses
   wherever the aside contains its own commas. Never leave a paired dash around a
   comma-separated list.
+- **British spellings.** Patrick writes American English, and the British forms
+  slip in constantly. behaviour, colour, recognise, optimise, organis*, licence,
+  programme, grey, judgement, towards, whilst, amongst, learnt, practising, and
+  above all `fortnight`, which he never uses. See §"American English" in the
+  guide for the grep.
 - Filler intensifiers past their first use in the piece: `actually`,
   `genuinely`, `precisely`, `exactly`.
 - Stock hedges of judiciousness: `worth noting`, `it's worth saying`, `in
