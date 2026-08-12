@@ -6,7 +6,6 @@ subtitle: "Four years after mounting tablets on walls, the dashboards finally ha
 date: 2025-11-15 16:00:00 -0500
 categories: [homelab]
 tags: [home-assistant, self-hosting, proxmox, networking]
-published: false
 ---
 
 I mounted Fire 7 tablets around the house in 2021 and pointed them at Home Assistant

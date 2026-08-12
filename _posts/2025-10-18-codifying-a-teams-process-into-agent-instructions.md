@@ -6,7 +6,6 @@ subtitle: "Writing down how we work so a tool could follow it turned out to be w
 date: 2025-10-18 11:00:00 -0400
 categories: [engineering]
 tags: [ai-tooling, developer-experience, teams]
-published: false
 ---
 
 We spent a chunk of this year encoding our project conventions into instructions an
@@ -87,7 +86,7 @@ and teams that resist written standards usually have it backwards: the tribal-kn
 version is far more constraining, because it enforces whatever the loudest reviewer
 prefers.
 
-Two smaller wins worth naming. **Onboarding**. a new developer reading these gets an
+Two smaller wins worth naming. **Onboarding**. A new developer reading these gets an
 accurate picture of conventions considerably faster than by reading code, because the
 documents state intent and code only shows outcome. And **consistency on mechanical
 work**, which is scaffolding that follows the project's conventions rather than the

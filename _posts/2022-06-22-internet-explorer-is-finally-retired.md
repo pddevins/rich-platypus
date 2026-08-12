@@ -6,7 +6,6 @@ subtitle: "Twenty-seven years, and the last browser that made you write a second
 date: 2022-06-22 12:00:00 -0400
 categories: [engineering]
 tags: [browsers, developer-experience]
-published: false
 ---
 
 Microsoft retired the Internet Explorer 11 desktop application on 15 June 2022. No more
@@ -37,4 +36,4 @@ JavaScript.
 Twenty-seven years is a long run for software, and IE deserves genuine credit for the
 parts of the web it made possible on the way up. It also spent the last decade as the
 reason a stylesheet was twice as long as it needed to be. Both are true, and only one of
-them affects my Tuesday.
+them affects my sanity.

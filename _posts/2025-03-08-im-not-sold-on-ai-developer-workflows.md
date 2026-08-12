@@ -6,7 +6,6 @@ subtitle: "The demos are all greenfield, the bottleneck was never typing, and co
 date: 2025-03-08 11:00:00 -0500
 categories: [engineering]
 tags: [ai-tooling, developer-experience]
-published: false
 ---
 
 Every demonstration of AI-assisted development I have watched builds something new,

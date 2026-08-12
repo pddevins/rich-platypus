@@ -6,7 +6,6 @@ subtitle: "Two vendors, two failures, and a verification pipeline whose weakest 
 date: 2026-05-16 11:00:00 -0400
 categories: [privacy]
 tags: [surveillance, digital-rights, threat-modeling]
-published: false
 ---
 
 In October, Discord disclosed that around seventy thousand government ID photographs had
@@ -108,7 +107,3 @@ like diving into water of unknown depth. When the failure mode is a well-indexed
 children, the argument for moving slowly is not obstruction. It's the caution we would
 apply to any other system where the blast radius lands on people who did not consent and
 cannot opt out.
-
-TODO: this moves fast and I've written it from reporting through mid-2026. Before
-publishing, re-check: whether the delayed rollout has begun, whether 5CA's denial has
-been resolved either way, and whether any regulator has responded to either incident.

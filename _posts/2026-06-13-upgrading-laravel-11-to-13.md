@@ -6,7 +6,6 @@ subtitle: "Two majors in one jump, and the PHP version requirement is the only t
 date: 2026-06-13 10:00:00 -0400
 categories: [engineering]
 tags: [laravel, php]
-published: false
 ---
 
 Laravel 13 arrived in March. If you're still on 11, you're skipping a major. That sounds

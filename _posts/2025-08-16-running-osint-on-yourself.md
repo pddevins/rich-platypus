@@ -6,7 +6,6 @@ subtitle: "An afternoon of open-source research on my own name turned up more th
 date: 2025-08-16 10:00:00 -0400
 categories: [privacy]
 tags: [osint, threat-modeling, surveillance]
-published: false
 ---
 
 The useful thing about open-source intelligence as a defensive exercise is that it
@@ -77,11 +76,6 @@ material and it is the bulk of the exposure.
 **No valid email addresses and no social media accounts.** Genuinely nothing usable. That
 surprised me more than the address history did, because it's the half that matters most
 for account takeover, and it's the half I've actually managed.
-
-**A GitHub repository on the first page of results.** First page. Which is the reminder
-that professional visibility and personal exposure use the same channel, and that the
-technical trail is the one I've been least careful about while being most careful
-elsewhere.
 
 **Personal information didn't appear until page four of a plain search.** Which brings me to
 the most useful and least reproducible finding.

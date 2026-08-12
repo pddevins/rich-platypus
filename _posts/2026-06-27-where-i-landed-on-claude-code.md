@@ -6,7 +6,6 @@ subtitle: "Fifteen months after writing that I wasn't sold, I use it daily. The 
 date: 2026-06-27 15:00:00 -0400
 categories: [engineering]
 tags: [ai-tooling, developer-experience, php]
-published: false
 ---
 
 Fifteen months ago I wrote that AI developer workflows optimize a step that was never my
@@ -149,5 +148,5 @@ It doesn't replace anything. I'm doing the same architecture, the same research,
 same planning, and I'm still responsible for every line that ships. What it does is
 raise the floor on thoroughness, on the days when my own floor is lower than I'd like.
 
-That's a real improvement and a much smaller claim than the one being marketed. I'd
-rather make the smaller claim accurately.
+That's a real improvement and probably a smaller claim than the one I see marketed. But,
+I'd rather take the smaller claim benifits than set the whole tool aside.

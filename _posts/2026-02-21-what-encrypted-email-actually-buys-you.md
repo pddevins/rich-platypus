@@ -6,7 +6,6 @@ subtitle: "Tuta and Proton both solve a narrower problem than their marketing im
 date: 2026-02-21 10:00:00 -0500
 categories: [privacy]
 tags: [email, encryption, threat-modeling]
-published: false
 ---
 
 Email is a protocol from 1982 with encryption bolted on in several incompatible ways,

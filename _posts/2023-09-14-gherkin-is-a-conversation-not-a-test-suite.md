@@ -6,7 +6,6 @@ subtitle: "Teams adopt it expecting better tests and get worse ones. Its actual 
 date: 2023-09-14 10:00:00 -0400
 categories: [engineering]
 tags: [testing, tdd, php]
-published: false
 ---
 
 Most teams that adopt Cucumber or Behat end up with a slower, more brittle test suite
@@ -54,18 +53,18 @@ report but a legal exposure. On a CRUD app with a clear domain, it's ceremony.
 
 ## The comparison, concretely
 
-**PHPUnit**. the default, and still correct for most things. Verbose, explicit,
+**PHPUnit**. The default, and still correct for most things. Verbose, explicit,
 mature. Its ceremony is a genuine cost on the hundredth test and a genuine benefit when
 a new engineer reads it cold. Best for unit and integration work where the audience is
 exclusively developers.
 
-**Pest**. the same engine with the ceremony removed. Higher-level `it()` blocks,
+**Pest**. The same engine with the ceremony removed. Higher-level `it()` blocks,
 expressive expectations, datasets that make parameterized cases readable instead of
 arduous. What it changes is not capability but the marginal cost of writing one more
 test, and that marginal cost is what determines how many tests exist. Best as the
 default for new PHP work.
 
-**Behat / Gherkin**. a specification tool that happens to execute. Best used for a
+**Behat / Gherkin**. A specification tool that happens to execute. Best used for a
 small number of scenarios describing business rules that non-developers need to read and
 confirm. Worst used as your integration suite.
 

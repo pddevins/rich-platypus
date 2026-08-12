@@ -6,7 +6,6 @@ subtitle: "Every gateway ships a good SDK. Nobody ships the layer above it, so e
 date: 2022-04-28 11:00:00 -0400
 categories: [engineering]
 tags: [payments, laravel, php]
-published: false
 ---
 
 I have shipped production integrations against Stripe, PayPal, Authorize.Net, Braintree,
@@ -61,13 +60,13 @@ package has done its main job.
 
 Then add on, incrementally and optionally:
 
-- **Inventory**. tracking tied to the order lifecycle, so a reserved item and a
+- **Inventory**. Tracking tied to the order lifecycle, so a reserved item and a
 captured payment can't disagree.
-- **Invoicing**. generation, delivery, and a payment status that reflects reality
+- **Invoicing**. Generation, delivery, and a payment status that reflects reality
 rather than a boolean somebody forgot to update.
 - **Accounting integrations**. QuickBooks first, since that's what actual small and
 mid-size businesses run on.
-- **Taxes**. the part everyone underestimates, and the reason so many carts are
+- **Taxes**. The part everyone underestimates, and the reason so many carts are
 quietly wrong.
 
 The add-on structure matters more than the feature list. A shop selling digital

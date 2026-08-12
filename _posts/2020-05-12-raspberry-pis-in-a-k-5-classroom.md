@@ -6,7 +6,6 @@ subtitle: "One board covers six grade levels, if you scope the activity to the a
 date: 2020-05-12 10:00:00 -0400
 categories: [electronics]
 tags: [raspberry-pi, stem, education, scratch]
-published: false
 ---
 
 A Raspberry Pi is a poor computer and an excellent teaching tool, and the reason is the

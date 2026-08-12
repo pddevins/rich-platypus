@@ -6,7 +6,6 @@ subtitle: "A Samba share, an external DVD drive, and a turntable routed through 
 date: 2025-09-20 13:00:00 -0400
 categories: [homelab]
 tags: [self-hosting, media-server, proxmox, tinkering]
-published: false
 ---
 
 With Proxmox and Nextcloud settled, the next job was the physical media: shelves of CDs,

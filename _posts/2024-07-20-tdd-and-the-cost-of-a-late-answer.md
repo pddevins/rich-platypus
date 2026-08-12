@@ -6,7 +6,6 @@ subtitle: "The argument for writing tests first has almost nothing to do with te
 date: 2024-07-20 10:00:00 -0400
 categories: [engineering]
 tags: [tdd, testing, php]
-published: false
 ---
 
 The case for test-driven development is usually made in terms of coverage and regression

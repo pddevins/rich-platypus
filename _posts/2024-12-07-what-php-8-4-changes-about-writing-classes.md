@@ -6,7 +6,6 @@ subtitle: "Property hooks and asymmetric visibility are the first additions in y
 date: 2024-12-07 09:00:00 -0500
 categories: [engineering]
 tags: [php, laravel]
-published: false
 ---
 
 PHP 8.4 shipped in November, and unlike 8.2 or 8.3 it contains changes that affect

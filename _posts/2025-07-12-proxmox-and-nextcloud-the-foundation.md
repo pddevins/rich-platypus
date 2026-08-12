@@ -6,7 +6,6 @@ subtitle: "Starting the homelab properly this time: a hypervisor first, then the
 date: 2025-07-12 14:00:00 -0400
 categories: [homelab]
 tags: [proxmox, nextcloud, self-hosting, zfs]
-published: false
 ---
 
 The mistake I've made with every previous homelab is starting with the interesting
@@ -135,5 +134,5 @@ the same front door.
 
 That's a deliberate acceptance rather than an oversight, and I'd rather write it down
 than imply the problem is solved. Flood, fire, or theft takes both copies. For the files
-where that actually matters, an offsite copy is the remaining piece of work, and it's
-been the remaining piece of work for a while now.
+where that actually matters, an offsite copy is the remaining piece of work, and it'll
+remain that way for a while, to be honest.

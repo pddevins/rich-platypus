@@ -6,7 +6,6 @@ subtitle: "The most useful mentorship question isn't what you want to be called.
 date: 2020-02-20 09:00:00 -0500
 categories: [leadership]
 tags: [mentorship, career, teams]
-published: false
 ---
 
 Junior, intermediate, senior, principal. We talk about these as levels. As though there
@@ -25,7 +24,7 @@ The conversation I used to have in that situation was about requirements. Here i
 senior means at this company. Here are your gaps. Close them.
 
 That isn't wrong, exactly. It just answers a question about identity with a checklist,
-and the checklist never satisfies anyone. What they want to know is whether they are
+and the checklist doesn't satisfy forever. What they want to know is whether they are
 becoming someone they'd want to be.
 
 So I stopped opening with the ladder. What I ask now is narrower, and more

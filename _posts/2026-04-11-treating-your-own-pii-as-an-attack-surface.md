@@ -6,7 +6,6 @@ subtitle: "Most personal data leaks because someone asked for it and you had no 
 date: 2026-04-11 10:00:00 -0400
 categories: [privacy]
 tags: [osint, threat-modeling, surveillance]
-published: false
 ---
 
 Last summer I ran open-source research on myself and produced an inventory. The

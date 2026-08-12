@@ -6,7 +6,6 @@ subtitle: "Three developers to twenty-one, one QA to eight, and a compliance pro
 date: 2023-06-30 17:00:00 -0400
 categories: [leadership]
 tags: [teams, consulting, career]
-published: false
 ---
 
 The most useful thing I learned this year is that scaling a team and scaling a system

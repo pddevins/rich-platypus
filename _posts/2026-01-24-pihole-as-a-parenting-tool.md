@@ -6,7 +6,6 @@ subtitle: "DNS filtering is a blunt instrument with one real advantage: it works
 date: 2026-01-24 11:00:00 -0500
 categories: [homelab]
 tags: [pihole, dns, networking, self-hosting]
-published: false
 ---
 
 Every device my kids use has its own parental controls, each with a different interface,
@@ -133,9 +132,8 @@ which is the worst of both and made me doubt the whole exercise.
 address-based, so without reservations the policy quietly stops applying and nothing
 tells you.
 
-**Run two instances, or accept the outage and tell the household.** I picked the third
-option, which is running one and not mentioning it, and that was a mistake with a
-predictable consequence.
+**Run two instances, or accept the outage and tell the household.** I picked the second 
+option, which is a tradeoff I'm willing to take.
 
 **Say out loud what this is for.** The most useful thing wasn't technical. Telling the
 kids the network filters some things, and why, and that it's imperfect, turned it from

@@ -6,7 +6,6 @@ subtitle: "A year rearranged most of what I assumed was fixed, and I'm walking i
 date: 2022-01-01 09:00:00 -0500
 categories: [personal]
 tags: [reflection]
-published: false
 ---
 
 I know considerably more about myself than I did twelve months ago, and almost none of

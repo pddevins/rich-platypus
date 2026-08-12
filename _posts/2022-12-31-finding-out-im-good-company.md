@@ -6,7 +6,6 @@ subtitle: "Watercolor chosen on purpose, two instruments twenty and four years c
 date: 2022-12-31 16:00:00 -0500
 categories: [personal]
 tags: [reflection]
-published: false
 ---
 
 Almost nothing I took up this year was new. I'd assumed that rediscovering creativity

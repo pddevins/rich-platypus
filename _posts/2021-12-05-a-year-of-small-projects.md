@@ -6,7 +6,6 @@ subtitle: "Seven things I built, broke, or nearly fixed while this blog sat unto
 date: 2021-12-05 14:00:00 -0500
 categories: [personal]
 tags: [tinkering, raspberry-pi, linux, self-hosting]
-published: false
 ---
 
 I haven't posted in about a year. The year wasn't idle. It was just spent on things that

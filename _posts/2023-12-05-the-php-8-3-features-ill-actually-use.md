@@ -6,7 +6,6 @@ subtitle: "A quiet release, and two of the additions close holes I've been worki
 date: 2023-12-05 09:00:00 -0500
 categories: [engineering]
 tags: [php, laravel]
-published: false
 ---
 
 PHP 8.3 landed on 23 November. It's a small release compared to 8.0 or 8.1, and that's

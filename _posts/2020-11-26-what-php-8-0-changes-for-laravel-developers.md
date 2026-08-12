@@ -6,7 +6,6 @@ subtitle: "The headline is the JIT. The features you'll actually use every day a
 date: 2020-11-26 16:00:00 -0500
 categories: [engineering]
 tags: [php, laravel, developer-experience]
-published: false
 ---
 
 PHP 8.0 shipped today. The release notes lead with the JIT, which is the item least

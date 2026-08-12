@@ -6,7 +6,6 @@ subtitle: "The authentication plugin gets the headlines. The collation change is
 date: 2023-10-17 11:00:00 -0400
 categories: [engineering]
 tags: [mysql, php, laravel]
-published: false
 ---
 
 MySQL 5.7 reached end of life this month, which converts this upgrade from a good idea

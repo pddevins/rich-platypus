@@ -6,7 +6,6 @@ subtitle: "Ten-year-old hardware, a distro I'd previously rejected for being too
 date: 2024-03-02 15:00:00 -0500
 categories: [engineering]
 tags: [arch-linux, linux, developer-experience]
-published: false
 ---
 
 A few years ago I ran a distro bake-off for professional work and Arch lost, on the

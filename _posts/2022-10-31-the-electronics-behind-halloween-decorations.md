@@ -6,7 +6,6 @@ subtitle: "The screaming skeleton on your porch is a two-dollar sensor, a timer,
 date: 2022-10-31 18:00:00 -0400
 categories: [electronics]
 tags: [sensors, tinkering]
-published: false
 ---
 
 Nearly every motion-activated Halloween prop on a porch tonight is built from the same

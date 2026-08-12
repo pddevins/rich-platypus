@@ -10,9 +10,9 @@ more infrastructure running at home than I can strictly justify.
 
 This blog is where I work things out in public: the homelab, small electronics,
 privacy and anti-surveillance, development workflows, the leadership side of
-engineering, and the critical-thinking habit underneath all of it. Posts come in
-four shapes — long posts, short essays, build logs, and notes — and each one is
-filed under exactly one [topic](/topics/).
+engineering, and the critical-thinking habit underneath all of it. Posts come in a
+few shapes: long posts, short essays, build logs, brief technical notes, and
+one-idea notes. Each one is filed under exactly one [topic](/topics/).
 
 ## About the site
 
