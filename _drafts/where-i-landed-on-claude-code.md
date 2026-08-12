@@ -2,18 +2,18 @@
 layout: post
 kind: post
 title: "Where I landed on Claude Code"
-subtitle: "Nine months after writing that I wasn't sold, I use it daily. The time savings are roughly a wash, and that isn't the reason."
-date: 2025-12-13 15:00:00 -0500
+subtitle: "Fifteen months after writing that I wasn't sold, I use it daily. The time savings are roughly a wash, and that isn't the reason."
+date: 2026-06-27 15:00:00 -0400
 categories: [engineering]
 tags: [ai-tooling, developer-experience, php]
 published: false
 ---
 
-In March I wrote that AI developer workflows optimise a step that was never my
-bottleneck, and that generating code I then have to understand moves effort from the
-thing I'm fast at to the thing I'm slow at. I still think that was correct about the
-workflow I was describing. I now use Claude Code every working day, and the reason has
-almost nothing to do with the argument I was having.
+Fifteen months ago I wrote that AI developer workflows optimise a step that was never my
+bottleneck, and that generating code I then have to understand moves effort from the thing
+I'm fast at to the thing I'm slow at. I still think that was correct about the workflow I
+was describing. I now use Claude Code every working day, and the reason has almost nothing
+to do with the argument I was having.
 
 <!--more-->
 
@@ -85,7 +85,7 @@ cost trust in every figure on the page.
 ## Skills and instructions are what make it work
 
 Out of the box, none of the above happens reliably. What makes the difference is
-persistent, project-scoped instructions — the same codified workflows I wrote about in
+persistent, project-scoped instructions — the same codified workflows I wrote about last
 October.
 
 Concretely: the project's conventions and non-obvious structure written down, review
@@ -129,8 +129,8 @@ I've learned to recognise the smell earlier: when the second correction is about
 same misunderstanding as the first, stop and write it myself. That single rule has
 recovered most of the wasted time.
 
-Net across the year: I'd call it even on hours, and comfortably ahead on defects that
-didn't reach a client.
+Net across the whole stretch: I'd call it even on hours, and comfortably ahead on defects
+that didn't reach a client.
 
 ## Why I still use it, given all that
 
@@ -141,8 +141,8 @@ The specific mechanism is that problems move earlier. An interaction found while
 still holding the design in my head costs a rethink. The same interaction found in QA
 costs a ticket and a context switch; found by a client, it costs credibility. The value
 isn't the hours, it's the stage at which things surface — which is the same argument I
-made for test-driven development in the summer, and it's a little embarrassing that I
-didn't recognise it sooner.
+made for test-driven development a couple of years back, and it's a little embarrassing
+that I didn't recognise it sooner.
 
 It doesn't replace anything. I'm doing the same architecture, the same research, the
 same planning, and I'm still responsible for every line that ships. What it does is
