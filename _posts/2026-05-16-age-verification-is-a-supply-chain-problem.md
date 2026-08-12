@@ -1,11 +1,13 @@
 ---
 layout: post
 kind: essay
-title: "Verifying children by photographing them"
-subtitle: "Two vendors, two failures, and a verification pipeline whose weakest link was never the cryptography."
+title: "Age verification is a supply-chain problem"
+subtitle: "Discord's age checks are a real attempt at a real problem. Neither failure so far had anything to do with cryptography, and both involved a vendor most users had never heard of."
 date: 2026-05-16 11:00:00 -0400
 categories: [privacy]
 tags: [surveillance, digital-rights, threat-modeling]
+redirect_from:
+  - /2026/05/verifying-children-by-photographing-them/
 ---
 
 In October, Discord disclosed that around seventy thousand government ID photographs had
