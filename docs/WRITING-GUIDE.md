@@ -94,6 +94,26 @@ enterprise, expertise.
 
 "Fortnight" in particular is a word he has never used.
 
+### Never name where he lives
+
+Patrick has lived in the American South since 2015. **Do not name the state or the
+city, ever**, in a post or in front matter.
+
+- Refer to the region as "the American South", or write around it: "southern
+  summer", "it gets hot here", "a Southerner".
+- Never write a state name even for somewhere he used to live. Earlier locations
+  are still locating information when combined with a date.
+- The exception is genuine contextual necessity, which is rarer than it sounds. If
+  the post works without the place name, drop it.
+
+This is a privacy blog whose author writes about minimizing his own locator data.
+Publishing a state plus a school district plus a date is exactly the Tier 3
+material the OSINT posts tell readers to protect.
+
+```bash
+grep -rniE '\b(alabama|arkansas|carolina|florida|georgia|kentucky|louisiana|mississippi|tennessee|texas|virginia)\b' _drafts/ _posts/
+```
+
 ### Phrases to ration, not ban
 
 Each of these is fine once in a piece and a tell by the third use. Grep before

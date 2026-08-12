@@ -47,14 +47,14 @@ without a layer in between.
 The loop was short enough to be qualitatively different. Someone describes a frustration
 on a call; you understand the workflow behind it rather than the feature they asked for;
 a change goes out; they tell you within days whether it helped. Most projects I've
-worked on have a version of that loop measured in quarters and filtered through three
-summaries, and by the time feedback arrives it has been converted into a feature request
-that no longer contains the problem.
+worked on have a version of that loop measured in sprints and filtered through three
+summaries and a session of "point poker", and by the time feedback arrives it has been 
+converted into a feature request that might not even contain the problem the user reported.
 
-The thing I'd tell anyone who gets this access: what users ask for is a solution they've
-already designed, usually badly, from a position of not knowing what's possible. The job
-on that call isn't to write down the request. It's to keep asking what they were trying
-to do until you reach the part that's actually theirs, and then solve that.
+The thing I'd tell anyone who gets this kind of access: what users ask for is a solution they've
+already designed, usually from a position of not knowing what's possible. The job
+on that call isn't to write down the request, word-for-word. It's to keep asking what they want
+to accomplish until you reach the part that's actually needed, and then solve that.
 
 ## Three to twenty-one, one to eight
 

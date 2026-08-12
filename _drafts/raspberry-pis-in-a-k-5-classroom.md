@@ -16,17 +16,22 @@ it the rare piece of technology that gets less mysterious the closer you look.
 
 <!--more-->
 
-This comes out of two years of volunteering with local schools here in Florida, where
-restrictions stayed loose enough that in-person sessions kept happening. The groups were
-split by grade. That is a luxury. It meant each activity could be pitched at one age
-instead of at a spread.
+This comes out of two years of volunteering with local schools, back when the Raspberry
+Pi was new and nobody had settled yet on what it was for in a classroom. I am writing it
+down now because the structure held up, and because the board has only got easier to teach
+with since.
 
-Everything below is a Raspberry Pi 3B. Worth naming, because the pinout and the Scratch
-GPIO support differ between models, and instructions written for a 3B will not all
-transfer to a Zero.
+The groups were split by grade. That is a luxury. It meant each activity could be pitched
+at one age instead of at a spread.
 
 The hardware stays the same across all six grades. What changes is the question being
 asked of it.
+
+TODO: which board, and does the timeline hold? You said 2011 to 2013, but the first
+Raspberry Pi shipped in February 2012 and the 3B not until February 2016, so a 3B is not
+possible in that window. Either the board was an early Model B and the 3B reference was
+mine to begin with, or the sessions ran later than you remember. The model is worth naming
+in the post, since pinouts differ, so I have left it out rather than guess.
 
 ## Kindergarten through first grade: inputs and outputs
 
@@ -60,8 +65,8 @@ reference. That skill has a much longer shelf life than the activity does.
 
 ## Third grade: Scratch, and the shape of a program
 
-Scratch ships with Raspberry Pi OS, which removes the entire "get the software
-installed" problem that otherwise eats a class period.
+Scratch ships with the Pi's own operating system, which removes the entire "get the
+software installed" problem that otherwise eats a class period.
 
 Blocks matter because they make syntax errors impossible. A block either snaps in or it
 doesn't. What is left to struggle with is the order things happen in. That struggle is
@@ -79,7 +84,8 @@ words out loud the first time.
 ## Fourth grade: connecting the two halves
 
 Scratch on the Pi can read the GPIO pins, which means the sensor from second grade and
-the program from third grade can finally meet.
+the program from third grade can finally meet. On the boards I used this needed an add-on
+rather than working out of the box, and it is one of the things that has got easier since.
 
 This is the first project that feels like engineering rather than an exercise. A light
 that comes on when someone walks past, using the PIR. A room that announces how warm it

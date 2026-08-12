@@ -71,6 +71,9 @@ drafts on build). Front matter follows the contract in the guide exactly, with
   whether a period, comma, colon, or set of parentheses does the job. A
   parenthetical containing commas always wants parentheses, never paired dashes.
   Count them before you finish; the per-era ceiling is in §1b and it is low.
+- **Never name where he lives.** Not the state, not the city, not a previous
+  state. "The American South" is as specific as it gets. He writes about reducing
+  his own locator data; don't publish it for him.
 - **Write American English.** `-ize` and `-or` endings, American vocabulary. Not
   behaviour/colour/recognise/optimise/licence/programme/grey/towards, and never
   "fortnight."

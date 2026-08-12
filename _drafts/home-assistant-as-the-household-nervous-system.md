@@ -94,7 +94,7 @@ Six entities. That's the whole installation, and I want to state the number plai
 because the genre this post belongs to is full of dashboards with four hundred of them.
 
 The one that has unambiguously earned its place is the HVAC temperature schedule. In a
-Florida summer, cooling is the electricity bill, and a schedule that follows when the
+southern summer, cooling is the electricity bill, and a schedule that follows when the
 house is occupied rather than a fixed program has been the single clearest saving in the
 whole setup. Not a clever automation. A thermostat that knows what day it is.
 

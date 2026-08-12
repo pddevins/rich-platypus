@@ -34,6 +34,9 @@ piece out of its era's band, in either direction.
   conjunction, a colon where the second half expands the first, and parentheses
   wherever the aside contains its own commas. Never leave a paired dash around a
   comma-separated list.
+- **Any place name identifying where he lives.** No state, no city, in prose or
+  front matter, including places he lived previously. The region is "the American
+  South" and nothing more specific. See §"Never name where he lives".
 - **British spellings.** Patrick writes American English, and the British forms
   slip in constantly. behaviour, colour, recognise, optimise, organis*, licence,
   programme, grey, judgement, towards, whilst, amongst, learnt, practising, and
